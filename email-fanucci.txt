@@ -1,0 +1,17 @@
+Carissimo Olgerti
+
+In allegato ti invio il testo del progetto. Eventuali dubbi sul testo si potranno discutere insieme al termine delle prossime lezioni.
+
+Ricordo che PRIMA di sostenere l'esame occorre:
+
+1.       inviare per email al sottoscritto sia la relazione che i codici sorgente in VHDL e quelli che eventualmente sviluppati per la progettazione e verifica del sistema (MATLAB, PYTON, C++, etc.);
+ 
+2.       fissare un appuntamento con il sottoscritto per la discussione del progetto.
+
+Mi raccomando presta particolare attenzione alla verifica motivando adeguatamente le strategie adottate nella relazione.
+
+Per la sintesi del progetto su Xilinx Zync FPGA utilizza il tool VIVADO che abbiamo visto a lezione. Riporta nella relazione finale le risorse utilizzate (slice, LUT, etc.) e la massima frequenza di funzionamento, il cammino critico, etc. commentando eventuali messaggi di warnings.
+
+Non esitare a contattarmi per qualsiasi richiesta di chiarimento.
+
+Buon lavoro, Luca Fanucci
