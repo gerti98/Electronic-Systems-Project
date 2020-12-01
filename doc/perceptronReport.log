@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.24)  30 NOV 2020 16:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.24)  1 DEC 2020 11:04
 entering extended mode
 **./perceptronReport.tex
 (perceptronReport.tex
@@ -250,30 +250,38 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 \c@blind@pangramcount=\count294
 \c@blind@pangrammax=\count295
 )
+(C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count296
+\float@exts=\toks23
+\float@box=\box53
+\@float@everytoks=\toks24
+\@floatcapt=\box54
+)
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count296
-\l__pdf_internal_box=\box53
+\l__kernel_color_stack_int=\count297
+\l__pdf_internal_box=\box55
 ) (perceptronReport.aux (chapters/introduction.aux)
 (chapters/architecture.aux) (chapters/vhdl_code.aux) (chapters/test_plan.aux)
 (chapters/xilinx_report.aux) (chapters/conclusion.aux))
 \openout1 = `perceptronReport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
 
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
@@ -293,22 +301,22 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
 \Gin@req@height=\dimen175
 \Gin@req@width=\dimen176
 )
-\c@lstlisting=\count297
+\c@lstlisting=\count298
 
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count298
+\scratchcounter=\count299
 \scratchdimen=\dimen177
-\scratchbox=\box54
-\nofMPsegments=\count299
-\nofMParguments=\count300
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count301
+\scratchbox=\box56
+\nofMPsegments=\count300
+\nofMParguments=\count301
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count302
 \MPscratchDim=\dimen178
-\MPnumerator=\count302
-\makeMPintoPDFobject=\count303
-\everyMPtoPDFconversion=\toks24
+\MPnumerator=\count303
+\makeMPintoPDFobject=\count304
+\everyMPtoPDFconversion=\toks26
 )
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -317,6 +325,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 
@@ -328,7 +337,7 @@ d
 File: img/marchio_unipi_pant541-eps-converted-to.pdf Graphic file (type pdf)
 <use img/marchio_unipi_pant541-eps-converted-to.pdf>
 Package pdftex.def Info: img/marchio_unipi_pant541-eps-converted-to.pdf  used o
-n input line 58.
+n input line 60.
 (pdftex.def)             Requested size: 390.0pt x 207.81781pt.
 [1
 
@@ -369,12 +378,27 @@ File: img/sigmoid.png Graphic file (type png)
 <use img/sigmoid.png>
 Package pdftex.def Info: img/sigmoid.png  used on input line 22.
 (pdftex.def)             Requested size: 227.62204pt x 177.5594pt.
-) [3 <./img/sigmoid.png>]
+<img/neural_network.png, id=29, 294.09875pt x 172.645pt>
+File: img/neural_network.png Graphic file (type png)
+<use img/neural_network.png>
+Package pdftex.def Info: img/neural_network.png  used on input line 33.
+(pdftex.def)             Requested size: 227.62204pt x 133.62198pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--34
+
+ []
+
+[3 <./img/sigmoid.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
+
+ []
+
+) [4 <./img/neural_network.png>]
 \openout2 = `chapters/architecture.aux'.
 
  (chapters/architecture.tex
 Chapter 2.
-) [4
+) [5
 
 
 
@@ -384,7 +408,7 @@ Chapter 2.
 
  (chapters/vhdl_code.tex
 Chapter 3.
-) [5
+) [6
 
 
 
@@ -394,7 +418,7 @@ Chapter 3.
 
  (chapters/test_plan.tex
 Chapter 4.
-) [6
+) [7
 
 
 
@@ -404,7 +428,7 @@ Chapter 4.
 
  (chapters/xilinx_report.tex
 Chapter 5.
-) [7
+) [8
 
 
 
@@ -414,7 +438,7 @@ Chapter 5.
 
  (chapters/conclusion.tex
 Chapter 6.
-) [8
+) [9
 
 
 
@@ -423,13 +447,13 @@ Chapter 6.
 (chapters/architecture.aux) (chapters/vhdl_code.aux) (chapters/test_plan.aux)
 (chapters/xilinx_report.aux) (chapters/conclusion.aux)) ) 
 Here is how much of TeX's memory you used:
- 6953 strings out of 480236
- 107437 string characters out of 2880557
- 415784 words of memory out of 3000000
- 23402 multiletter control sequences out of 15000+200000
+ 7006 strings out of 480236
+ 108264 string characters out of 2880557
+ 418783 words of memory out of 3000000
+ 23450 multiletter control sequences out of 15000+200000
  545213 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,7n,77p,344b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 70i,7n,77p,386b,327s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\gxhan\AppDa
 ta\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1200.pk> <C:\Users\gxhan
 \AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users
@@ -449,9 +473,9 @@ xhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/
 Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
 cm/cmsy8.pfb>
-Output written on perceptronReport.pdf (9 pages, 301919 bytes).
+Output written on perceptronReport.pdf (10 pages, 316572 bytes).
 PDF statistics:
- 331 PDF objects out of 1000 (max. 8388607)
+ 346 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
