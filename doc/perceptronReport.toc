@@ -3,8 +3,8 @@
 \contentsline {section}{\numberline {1.1}Problem Description}{2}{}%
 \contentsline {section}{\numberline {1.2}Applications}{3}{}%
 \contentsline {section}{\numberline {1.3}Possible Architectures}{4}{}%
-\contentsline {chapter}{\numberline {2}Architecture}{5}{}%
-\contentsline {chapter}{\numberline {3}VHDL CODE}{6}{}%
-\contentsline {chapter}{\numberline {4}Test Plan}{7}{}%
-\contentsline {chapter}{\numberline {5}XILINX VIVADO Report}{8}{}%
-\contentsline {chapter}{\numberline {6}Conclusion}{9}{}%
+\contentsline {chapter}{\numberline {2}Architecture}{6}{}%
+\contentsline {chapter}{\numberline {3}VHDL CODE}{7}{}%
+\contentsline {chapter}{\numberline {4}Test Plan}{8}{}%
+\contentsline {chapter}{\numberline {5}XILINX VIVADO Report}{9}{}%
+\contentsline {chapter}{\numberline {6}Conclusion}{10}{}%
