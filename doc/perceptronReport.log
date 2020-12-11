@@ -1,23 +1,22 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.24)  8 DEC 2020 22:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.24)  10 DEC 2020 18:13
 entering extended mode
 **./perceptronReport.tex
 (perceptronReport.tex
 LaTeX2e <2020-10-01> patch level 1
 L3 programming layer <2020-10-05> xparse <2020-03-03>
-(C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
-Document Class: report 2020/04/10 v1.4m Standard LaTeX document class
+(C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
 File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
 \c@part=\count175
-\c@chapter=\count176
-\c@section=\count177
-\c@subsection=\count178
-\c@subsubsection=\count179
-\c@paragraph=\count180
-\c@subparagraph=\count181
-\c@figure=\count182
-\c@table=\count183
+\c@section=\count176
+\c@subsection=\count177
+\c@subsubsection=\count178
+\c@paragraph=\count179
+\c@subparagraph=\count180
+\c@figure=\count181
+\c@table=\count182
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
@@ -30,15 +29,15 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 )
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count184
-\calc@Bcount=\count185
+\calc@Acount=\count183
+\calc@Bcount=\count184
 \calc@Adimen=\dimen139
 \calc@Bdimen=\dimen140
 \calc@Askip=\skip49
 \calc@Bskip=\skip50
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count186
+\calc@Ccount=\count185
 \calc@Cskip=\skip51
 )
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
@@ -64,13 +63,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count187
+\inf@bad=\count186
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count188
-\leftroot@=\count189
+\uproot@=\count187
+\leftroot@=\count188
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count190
-\DOTSCASE@=\count191
+\classnum@=\count189
+\DOTSCASE@=\count190
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -79,15 +78,15 @@ LaTeX Info: Redefining \cdots on input line 620.
 \big@size=\dimen143
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count192
-\c@MaxMatrixCols=\count193
+\macc@depth=\count191
+\c@MaxMatrixCols=\count192
 \dotsspace@=\muskip16
-\c@parentequation=\count194
-\dspbrk@lvl=\count195
+\c@parentequation=\count193
+\dspbrk@lvl=\count194
 \tag@help=\toks17
-\row@=\count196
-\column@=\count197
-\maxfields@=\count198
+\row@=\count195
+\column@=\count196
+\maxfields@=\count197
 \andhelp@=\toks18
 \eqnshift@=\dimen144
 \alignsep@=\dimen145
@@ -106,7 +105,7 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
-\g_MT_multlinerow_int=\count199
+\g_MT_multlinerow_int=\count198
 \l_MT_multwidth_dim=\dimen150
 \origjot=\skip55
 \l_MT_shortvdotswithinadjustabove_dim=\dimen151
@@ -119,23 +118,23 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
 \xmathstrut@dim=\dimen157
 )
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count266
+\lst@mode=\count199
 \lst@gtempboxa=\box50
 \lst@token=\toks21
-\lst@length=\count267
+\lst@length=\count266
 \lst@currlwidth=\dimen158
-\lst@column=\count268
-\lst@pos=\count269
+\lst@column=\count267
+\lst@pos=\count268
 \lst@lostspace=\dimen159
 \lst@width=\dimen160
-\lst@newlines=\count270
-\lst@lineno=\count271
+\lst@newlines=\count269
+\lst@lineno=\count270
 \lst@maxwidth=\dimen161
 
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count272
-\lst@skipnumbers=\count273
+\c@lstnumber=\count271
+\lst@skipnumbers=\count272
 \lst@framebox=\box51
 )
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
@@ -167,14 +166,14 @@ Package: babel 2020/10/06 3.50 The Babel package
 
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
 File: babel.def 2020/10/06 3.50 Babel common definitions
-\babel@savecnt=\count274
+\babel@savecnt=\count273
 \U@D=\dimen162
 \l@babelnohyphens=\language79
 
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
 )
-\bbl@dirlevel=\count275
+\bbl@dirlevel=\count274
 
 *************************************
 * Local config file bblopts.cfg used
@@ -207,8 +206,8 @@ Package: caption3 2020/09/17 v2.1b caption3 kernel (AR)
 \caption@hangindent=\dimen169
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count276
-\c@continuedfloat=\count277
+\c@caption@flags=\count275
+\c@continuedfloat=\count276
 Package caption Info: listings package is loaded.
 )
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
@@ -231,28 +230,28 @@ Package: blindtext 2012/01/06 V2.0 blindtext-Package
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count278
-\c@Blindtext=\count279
-\c@blind@countparstart=\count280
-\blind@countxx=\count281
-\blindtext@numBlindtext=\count282
-\blind@countyy=\count283
-\c@blindlist=\count284
-\c@blindlistlevel=\count285
-\c@blindlist@level=\count286
-\blind@listitem=\count287
-\c@blind@listcount=\count288
-\c@blind@levelcount=\count289
-\blind@mathformula=\count290
-\blind@Mathformula=\count291
-\c@blind@randomcount=\count292
-\c@blind@randommax=\count293
-\c@blind@pangramcount=\count294
-\c@blind@pangrammax=\count295
+\c@blindtext=\count277
+\c@Blindtext=\count278
+\c@blind@countparstart=\count279
+\blind@countxx=\count280
+\blindtext@numBlindtext=\count281
+\blind@countyy=\count282
+\c@blindlist=\count283
+\c@blindlistlevel=\count284
+\c@blindlist@level=\count285
+\blind@listitem=\count286
+\c@blind@listcount=\count287
+\c@blind@levelcount=\count288
+\blind@mathformula=\count289
+\blind@Mathformula=\count290
+\c@blind@randomcount=\count291
+\c@blind@randommax=\count292
+\c@blind@pangramcount=\count293
+\c@blind@pangrammax=\count294
 )
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count296
+\c@float@type=\count295
 \float@exts=\toks23
 \float@box=\box53
 \@float@everytoks=\toks24
@@ -261,7 +260,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count297
+\l__kernel_color_stack_int=\count296
 \l__pdf_internal_box=\box55
 ) (perceptronReport.aux (chapters/introduction.aux)
 (chapters/architecture.aux) (chapters/vhdl_code.aux) (chapters/test_plan.aux)
@@ -301,21 +300,21 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
 \Gin@req@height=\dimen175
 \Gin@req@width=\dimen176
 )
-\c@lstlisting=\count298
+\c@lstlisting=\count297
 
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count299
+\scratchcounter=\count298
 \scratchdimen=\dimen177
 \scratchbox=\box56
-\nofMPsegments=\count300
-\nofMParguments=\count301
+\nofMPsegments=\count299
+\nofMParguments=\count300
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count302
+\MPscratchCnt=\count301
 \MPscratchDim=\dimen178
-\MPnumerator=\count303
-\makeMPintoPDFobject=\count304
+\MPnumerator=\count302
+\makeMPintoPDFobject=\count303
 \everyMPtoPDFconversion=\toks26
 )
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -346,15 +345,11 @@ nipi_pant541-eps-converted-to.pdf>] (perceptronReport.toc)
 \tf@toc=\write3
 \openout3 = `perceptronReport.toc'.
 
- [1
-
-]
+ [1]
 \openout2 = `chapters/introduction.aux'.
 
 
 (chapters/introduction.tex
-Chapter 1.
-
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
@@ -369,16 +364,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
 
-[2
-
-
- <./img/perceptron.png>]
-<img/sigmoid.png, id=28, 492.8814pt x 384.4764pt>
+<img/sigmoid.png, id=22, 492.8814pt x 384.4764pt>
 File: img/sigmoid.png Graphic file (type png)
 <use img/sigmoid.png>
 Package pdftex.def Info: img/sigmoid.png  used on input line 22.
 (pdftex.def)             Requested size: 227.62204pt x 177.5594pt.
-<img/neural_network.png, id=29, 294.09875pt x 172.645pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2
+
+ <./img/perceptron.png>]
+<img/neural_network.png, id=37, 294.09875pt x 172.645pt>
 File: img/neural_network.png Graphic file (type png)
 <use img/neural_network.png>
 Package pdftex.def Info: img/neural_network.png  used on input line 33.
@@ -388,127 +385,113 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--34
 
  []
 
-[3 <./img/sigmoid.png>] [4 <./img/neural_network.png>]) [5]
+[3 <./img/sigmoid.png> <./img/neural_network.png>]) [4]
 \openout2 = `chapters/architecture.aux'.
 
 
 (chapters/architecture.tex
-Chapter 2.
-<img/architecture_general_schema.pdf, id=49, 477.70468pt x 515.04419pt>
+<img/architecture_general_schema.pdf, id=46, 477.70468pt x 515.04419pt>
 File: img/architecture_general_schema.pdf Graphic file (type pdf)
 <use img/architecture_general_schema.pdf>
 Package pdftex.def Info: img/architecture_general_schema.pdf  used on input lin
 e 6.
 (pdftex.def)             Requested size: 341.43306pt x 368.12807pt.
-<img/architecture_parallel_multiplier.pdf, id=50, 413.62529pt x 435.54718pt>
+<img/architecture_parallel_multiplier.pdf, id=47, 413.62529pt x 435.54718pt>
 File: img/architecture_parallel_multiplier.pdf Graphic file (type pdf)
 <use img/architecture_parallel_multiplier.pdf>
 Package pdftex.def Info: img/architecture_parallel_multiplier.pdf  used on inpu
 t line 14.
 (pdftex.def)             Requested size: 369.88582pt x 389.51654pt.
-[6
-
+ [5
 
 
 
  <./img/architecture_general_schema.pdf>]
-<img/architecture_full_adder_with_pipeline.pdf, id=69, 680.5425pt x 272.93968pt
+<img/architecture_full_adder_with_pipeline.pdf, id=65, 680.5425pt x 272.93968pt
 >
 File: img/architecture_full_adder_with_pipeline.pdf Graphic file (type pdf)
 <use img/architecture_full_adder_with_pipeline.pdf>
 Package pdftex.def Info: img/architecture_full_adder_with_pipeline.pdf  used on
  input line 21.
 (pdftex.def)             Requested size: 585.0pt x 234.63191pt.
- [7 <./img/architecture_parallel_multiplier.pdf>]
-<img/architecture_adder_tree.pdf, id=87, 576.23282pt x 738.84026pt>
+ [6 <./img/architecture_parallel_multiplier.pdf>]
+<img/architecture_adder_tree.pdf, id=84, 576.23282pt x 738.84026pt>
 File: img/architecture_adder_tree.pdf Graphic file (type pdf)
 <use img/architecture_adder_tree.pdf>
 Package pdftex.def Info: img/architecture_adder_tree.pdf  used on input line 27
 .
 (pdftex.def)             Requested size: 390.0pt x 500.05978pt.
- [8 <./img/architecture_full_adder_with_pipeline.pdf>]
-<img/architecture_lut_optimized.pdf, id=100, 203.80139pt x 82.3878pt>
+ [7 <./img/architecture_full_adder_with_pipeline.pdf>]
+<img/architecture_lut_optimized.pdf, id=97, 203.80139pt x 82.3878pt>
 File: img/architecture_lut_optimized.pdf Graphic file (type pdf)
 <use img/architecture_lut_optimized.pdf>
 Package pdftex.def Info: img/architecture_lut_optimized.pdf  used on input line
- 36.
+ 37.
 (pdftex.def)             Requested size: 234.00238pt x 94.59811pt.
- [9 <./img/architecture_adder_tree.pdf>]) [10 <./img/architecture_lut_optimized
-.pdf>]
+ [8 <./img/architecture_adder_tree.pdf>]) [9 <./img/architecture_lut_optimized.
+pdf>]
 \openout2 = `chapters/vhdl_code.aux'.
 
-
-(chapters/vhdl_code.tex
-Chapter 3.
-) [11
-
+ (chapters/vhdl_code.tex) [10
 
 
 
 ]
 \openout2 = `chapters/test_plan.aux'.
 
- (chapters/test_plan.tex
-Chapter 4.
-) [12
-
+ (chapters/test_plan.tex)
+[11
 
 
 
 ]
 \openout2 = `chapters/xilinx_report.aux'.
 
- (chapters/xilinx_report.tex
-Chapter 5.
-) [13
-
+ (chapters/xilinx_report.tex) [12
 
 
 
 ]
 \openout2 = `chapters/conclusion.aux'.
 
- (chapters/conclusion.tex
-Chapter 6.
-) [14
+ (chapters/conclusion.tex) [13
 
 
 
-
-] (perceptronReport.aux (chapters/introduction.aux)
-(chapters/architecture.aux) (chapters/vhdl_code.aux) (chapters/test_plan.aux)
-(chapters/xilinx_report.aux) (chapters/conclusion.aux)) ) 
+]
+(perceptronReport.aux (chapters/introduction.aux) (chapters/architecture.aux)
+(chapters/vhdl_code.aux) (chapters/test_plan.aux) (chapters/xilinx_report.aux)
+(chapters/conclusion.aux)) ) 
 Here is how much of TeX's memory you used:
- 7039 strings out of 480236
- 109604 string characters out of 2880557
- 421889 words of memory out of 3000000
- 23477 multiletter control sequences out of 15000+200000
- 545550 words of font info for 51 fonts, out of 3000000 for 9000
+ 7027 strings out of 480236
+ 109464 string characters out of 2880557
+ 422176 words of memory out of 3000000
+ 23464 multiletter control sequences out of 15000+200000
+ 546316 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  70i,8n,77p,860b,327s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\gxhan\AppDa
-ta\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\gxhan
-\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1200.pk> <C:\Users
-\gxhan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:
-\Users\gxhan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.p
-k> <C:\Users\gxhan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx
-2488.pk> <C:\Users\gxhan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ecrm1200.pk> <C:\Users\gxhan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\ecti1200.pk> <C:\Users\gxhan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecbi2488.pk> <C:\Users\gxhan\AppData\Local\MiKTeX\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecrm1728.pk><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/gxhan/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/gxhan/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/gxhan/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/gxh
-an/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/U
-sers/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pf
-b><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmsy8.pfb>
-Output written on perceptronReport.pdf (15 pages, 459873 bytes).
+ <C:\Users\gxhan\AppData\Local\MiKTeX\fonts/pk/ljfo
+ur/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\gxhan\AppData\Local\MiKTeX\fonts/p
+k/ljfour/jknappen/ec/dpi600\ecbi1200.pk> <C:\Users\gxhan\AppData\Local\MiKTeX\f
+onts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\gxhan\AppData\Local\Mi
+KTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\gxhan\AppData\Lo
+cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\gxhan\AppD
+ata\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\gxha
+n\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\User
+s\gxhan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi2488.pk> <C
+:\Users\gxhan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.
+pk><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmex10.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmmi12.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmmi6.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/gxhan/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/gxhan/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/gxhan/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gxhan/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on perceptronReport.pdf (14 pages, 458272 bytes).
 PDF statistics:
- 452 PDF objects out of 1000 (max. 8388607)
+ 448 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
