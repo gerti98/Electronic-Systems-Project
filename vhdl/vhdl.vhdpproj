@@ -6,9 +6,36 @@
   </Items>
   <Items xsi:type="ProjectFolder">
     <Header>src</Header>
+    <Items xsi:type="ProjectFileVHDL">
+      <Header>FULL_ADDER.vhd</Header>
+    </Items>
+    <Items xsi:type="ProjectFileVHDL">
+      <Header>HALF_ADDER.vhd</Header>
+    </Items>
+    <Items xsi:type="ProjectFileVHDL">
+      <Header>Parallel_DFF.vhd</Header>
+    </Items>
+    <Items xsi:type="ProjectFileVHDL">
+      <Header>Parallel_Multiplier.vhd</Header>
+    </Items>
+    <Items xsi:type="ProjectFileVHDL">
+      <Header>Perceptron.vhd</Header>
+    </Items>
+    <Items xsi:type="ProjectFileVHDL">
+      <Header>RIPPLE_CARRY_ADDER.vhd</Header>
+    </Items>
+    <Items xsi:type="ProjectFileVHDL">
+      <Header>Tree_Adder.vhd</Header>
+    </Items>
+    <Items xsi:type="ProjectFileVHDL">
+      <Header>ddfs_lut_4096.vhd</Header>
+    </Items>
   </Items>
   <Items xsi:type="ProjectFolder">
     <Header>tb</Header>
+    <Items xsi:type="ProjectFileVHDL">
+      <Header>Parallel_Multiplier_tb.vhd</Header>
+    </Items>
   </Items>
   <Items xsi:type="ProjectFileVHDL">
     <Header>vhdl.vhd</Header>
@@ -26,5 +53,6 @@
     <string xsi:nil="true" />
   </CruviLSExtensions>
   <IOVoltage>0</IOVoltage>
+  <References />
   <UseShield>false</UseShield>
 </ProjectRoot>
