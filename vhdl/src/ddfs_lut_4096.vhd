@@ -10,7 +10,7 @@ entity ddfs_lut_4096 is
 end ddfs_lut_4096;
 
 architecture rtl of ddfs_lut_4096 is
-type LUT_t is array (natural range 0 to 4095) of integer;
+type LUT_t is array (natural range 0 to 4095) of integer(
     0 => 0,
     1 => 0,
     2 => 0,
@@ -4110,5 +4110,5 @@ type LUT_t is array (natural range 0 to 4095) of integer;
 );
 
 begin
-  dds_out <= std_logic_vector(TO_SIGNED(LUT(TO_INTEGER(unsigned(address))),6));
+  dds_out <= std_logic_vector(to_signed(LUT(to_integer(unsigned(address))),6));
 end rtl;

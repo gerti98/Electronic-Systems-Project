@@ -14,5 +14,5 @@ end HALF_ADDER;
 architecture DataFlow of HALF_ADDER is
 begin 
     s <= a xor b;
-    cout <= (b) or (a and b) or (a);
+    cout <= (a and b);
 end DataFlow;
