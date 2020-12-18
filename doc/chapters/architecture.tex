@@ -8,7 +8,7 @@ In this chapter will be discussed deeply the architecture of the three main part
 \end{figure}
 
 \subsection{Multiplication Circuit Architecture}
-The Multiplication Circuit, as said before, will be implemented through a Parallel Multiplier. The inputs $b_{i}$ and $w_{i}$ are composed respectively by $b_{x} = 8$ bits and $b_{w} = 9$ bits. In the following image is presented the architecture with these particular inputs.
+The Multiplication Circuit, as said before, will be implemented through a Parallel Multiplier. The inputs $b_{i}$ and $w_{i}$ are composed respectively by $b_{x} = 8$ bits and $b_{w} = 9$ bits. In order to compute the multiplication in the correct way, the inputs need to be translated in the \textbf{unsigned form} and then is possible to perform the multiplication with the parallel multiplier. In the following image is presented the architecture with these particular inputs.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=13cm]{img/architecture_parallel_multiplier.pdf}

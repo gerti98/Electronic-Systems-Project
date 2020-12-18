@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.24)  11 DEC 2020 17:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.24)  18 DEC 2020 18:56
 entering extended mode
 **./perceptronReport.tex
 (perceptronReport.tex
@@ -210,9 +210,6 @@ Package caption Info: Standard document class detected.
 \c@continuedfloat=\count276
 Package caption Info: listings package is loaded.
 )
-(C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
-Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
-)
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \ttl@box=\box52
@@ -354,7 +351,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-<img/perceptron.png, id=21, 316.81606pt x 160.47049pt>
+<img/perceptron.png, id=20, 316.81606pt x 160.47049pt>
 File: img/perceptron.png Graphic file (type png)
 <use img/perceptron.png>
 Package pdftex.def Info: img/perceptron.png  used on input line 8.
@@ -364,7 +361,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
 
-<img/sigmoid.png, id=22, 492.8814pt x 384.4764pt>
+<img/sigmoid.png, id=21, 492.8814pt x 384.4764pt>
 File: img/sigmoid.png Graphic file (type png)
 <use img/sigmoid.png>
 Package pdftex.def Info: img/sigmoid.png  used on input line 22.
@@ -375,7 +372,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [2
 
  <./img/perceptron.png>]
-<img/neural_network.png, id=37, 294.09875pt x 172.645pt>
+<img/neural_network.png, id=33, 294.09875pt x 172.645pt>
 File: img/neural_network.png Graphic file (type png)
 <use img/neural_network.png>
 Package pdftex.def Info: img/neural_network.png  used on input line 33.
@@ -390,13 +387,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--34
 
 
 (chapters/architecture.tex
-<img/architecture_general_schema.pdf, id=46, 477.70468pt x 515.04419pt>
+<img/architecture_general_schema.pdf, id=42, 477.70468pt x 515.04419pt>
 File: img/architecture_general_schema.pdf Graphic file (type pdf)
 <use img/architecture_general_schema.pdf>
 Package pdftex.def Info: img/architecture_general_schema.pdf  used on input lin
 e 6.
 (pdftex.def)             Requested size: 341.43306pt x 368.12807pt.
-<img/architecture_parallel_multiplier.pdf, id=47, 413.62529pt x 435.54718pt>
+<img/architecture_parallel_multiplier.pdf, id=43, 413.62529pt x 435.54718pt>
 File: img/architecture_parallel_multiplier.pdf Graphic file (type pdf)
 <use img/architecture_parallel_multiplier.pdf>
 Package pdftex.def Info: img/architecture_parallel_multiplier.pdf  used on inpu
@@ -407,7 +404,7 @@ t line 14.
 
 
  <./img/architecture_general_schema.pdf>]
-<img/architecture_full_adder_with_pipeline.pdf, id=65, 680.5425pt x 272.93968pt
+<img/architecture_full_adder_with_pipeline.pdf, id=61, 680.5425pt x 272.93968pt
 >
 File: img/architecture_full_adder_with_pipeline.pdf Graphic file (type pdf)
 <use img/architecture_full_adder_with_pipeline.pdf>
@@ -415,14 +412,14 @@ Package pdftex.def Info: img/architecture_full_adder_with_pipeline.pdf  used on
  input line 21.
 (pdftex.def)             Requested size: 585.0pt x 234.63191pt.
  [6 <./img/architecture_parallel_multiplier.pdf>]
-<img/architecture_adder_tree.pdf, id=84, 576.23282pt x 738.84026pt>
+<img/architecture_adder_tree.pdf, id=80, 576.23282pt x 738.84026pt>
 File: img/architecture_adder_tree.pdf Graphic file (type pdf)
 <use img/architecture_adder_tree.pdf>
 Package pdftex.def Info: img/architecture_adder_tree.pdf  used on input line 27
 .
 (pdftex.def)             Requested size: 390.0pt x 500.05978pt.
  [7 <./img/architecture_full_adder_with_pipeline.pdf>]
-<img/architecture_lut_optimized.pdf, id=97, 203.80139pt x 82.3878pt>
+<img/architecture_lut_optimized.pdf, id=93, 203.80139pt x 82.3878pt>
 File: img/architecture_lut_optimized.pdf Graphic file (type pdf)
 <use img/architecture_lut_optimized.pdf>
 Package pdftex.def Info: img/architecture_lut_optimized.pdf  used on input line
@@ -463,35 +460,31 @@ pdf>]
 (chapters/vhdl_code.aux) (chapters/test_plan.aux) (chapters/xilinx_report.aux)
 (chapters/conclusion.aux)) ) 
 Here is how much of TeX's memory you used:
- 7027 strings out of 480236
- 109464 string characters out of 2880557
- 422176 words of memory out of 3000000
- 23464 multiletter control sequences out of 15000+200000
- 546316 words of font info for 52 fonts, out of 3000000 for 9000
+ 6813 strings out of 480236
+ 107896 string characters out of 2880557
+ 422070 words of memory out of 3000000
+ 23259 multiletter control sequences out of 15000+200000
+ 541717 words of font info for 51 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  70i,8n,77p,860b,327s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\gxhan\AppData\Local\MiKTeX\fonts/pk/ljfo
-ur/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\gxhan\AppData\Local\MiKTeX\fonts/p
-k/ljfour/jknappen/ec/dpi600\ecbi1200.pk> <C:\Users\gxhan\AppData\Local\MiKTeX\f
-onts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\gxhan\AppData\Local\Mi
-KTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\gxhan\AppData\Lo
-cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\gxhan\AppD
-ata\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\gxha
-n\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\User
-s\gxhan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi2488.pk> <C
-:\Users\gxhan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.
-pk><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmex10.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmmi12.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmmi6.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/gxhan/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/gxhan/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/gxhan/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gxhan/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on perceptronReport.pdf (14 pages, 458269 bytes).
+ur/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/gxhan/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/gxhan/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/gxhan/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/gxhan/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Use
+rs/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb
+><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mmi8.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmr17.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gxhan/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/gxhan/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on perceptronReport.pdf (14 pages, 425239 bytes).
 PDF statistics:
- 448 PDF objects out of 1000 (max. 8388607)
+ 178 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
