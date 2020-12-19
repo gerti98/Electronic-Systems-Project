@@ -12,25 +12,25 @@ architecture bhv of Ripple_Carry_Adder_Pipelined_tb is -- Testbench architecture
     -----------------------------------------------------------------------------------
     constant T_CLK   : time := 10 ns; -- Clock period
     constant T_RESET : time := 25 ns; -- Period before the reset deassertion
-    constant N_BIT: integer := 8;
+    constant N_BIT: integer := 9;
     -----------------------------------------------------------------------------------
     -- Testbench signals
     -----------------------------------------------------------------------------------
     
-    signal a_tb : std_logic_vector(N_BIT-1 downto 0) := (others => '0'); -- first operand 
-    signal b_tb : std_logic_vector(N_BIT-1 downto 0) := (others => '0');
-    signal s_tb : std_logic_vector(N_BIT downto 0) := (others => '0');
+    signal a_tb : std_logic_vector(N_BIT-2 downto 0) := (others => '0'); -- first operand 
+    signal b_tb : std_logic_vector(N_BIT-2 downto 0) := (others => '0');
+    signal s_tb : std_logic_vector(N_BIT-1 downto 0) := (others => '0');
     
     signal clk_tb : std_logic := '0'; -- clock signal, intialized to '0' 
     signal rst_tb  : std_logic := '0'; -- reset signal  
     signal end_sim : std_logic := '1'; -- signal to use to stop the simulation when there is nothing else to test
-    
+    signal tmp: std_logic;
     
     component Ripple_Carry_Adder_Pipelined
         generic(Nbit : positive);
         port(
-            a_r    : in  std_logic_vector(Nbit - 1 downto 0);
-            b_r    : in  std_logic_vector(Nbit - 1 downto 0);
+            a_r    : in  std_logic_vector(Nbit - 2 downto 0);
+            b_r    : in  std_logic_vector(Nbit - 2 downto 0);
             cin_r  : in  std_logic;
             cout_r : out std_logic;
             s_r    : out std_logic_vector(Nbit - 1 downto 0);
@@ -51,7 +51,7 @@ begin
                 a_r    => a_tb,
                 b_r    => b_tb,
                 cin_r  => '0',
-                cout_r => s_tb(N_BIT),
+                cout_r => tmp,
                 s_r    => s_tb(N_BIT-1 downto 0),
                 clk    => clk_tb,
                 rst    => rst_tb

@@ -6,8 +6,8 @@ use IEEE.std_logic_1164.all;
 entity Ripple_Carry_Adder_Pipelined is
     generic (Nbit: positive);
     port(
-        a_r: in std_logic_vector(Nbit-1 downto 0);
-        b_r: in std_logic_vector(Nbit-1 downto 0);
+        a_r: in std_logic_vector(Nbit-2 downto 0);
+        b_r: in std_logic_vector(Nbit-2 downto 0);
         cin_r: in std_logic;
         cout_r: out std_logic;
         s_r: out std_logic_vector(Nbit-1 downto 0);
@@ -60,8 +60,9 @@ begin
                 FFI: FULL_ADDER port map (a_r(i-1), b_r(i-1), carry_signal(i-1), s_r(i-1), carry_signal(i));
             end generate NOT_PIPE;           
         end generate INTERNAL;
+        -- Implicit extension
         LAST: if i=Nbit generate
-            FFI: FULL_ADDER port map (a_r(Nbit-1), b_r(Nbit-1), carry_signal(Nbit-1), s_r(Nbit-1), cout_r);
+            FFI: FULL_ADDER port map (a_r(Nbit-2), b_r(Nbit-2), carry_signal(Nbit-1), s_r(Nbit-1), cout_r);
         end generate LAST;
     end generate GEN;
 end rtl;
