@@ -2,11 +2,11 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity Parallel_Multiplier_tb is   -- The testbench has no interface, so it is an empty entity (Be careful: the keyword "is" was missing in the code written in class).
-end Parallel_Multiplier_tb;
+entity Unsigned_Parallel_Multiplier_tb is   -- The testbench has no interface, so it is an empty entity (Be careful: the keyword "is" was missing in the code written in class).
+end Unsigned_Parallel_Multiplier_tb;
 
 
-architecture bhv of Parallel_Multiplier_tb is -- Testbench architecture declaration
+architecture bhv of Unsigned_Parallel_Multiplier_tb is -- Testbench architecture declaration
     -----------------------------------------------------------------------------------
     -- Testbench constants
     -----------------------------------------------------------------------------------
@@ -27,31 +27,31 @@ architecture bhv of Parallel_Multiplier_tb is -- Testbench architecture declarat
     signal end_sim : std_logic := '1'; -- signal to use to stop the simulation when there is nothing else to test
     
     
-    component Parallel_Multiplier
+    component Unsigned_Parallel_Multiplier
         generic(
             Nbit_a : positive;
             Nbit_b : positive
         );
         port(
-            a_p_signed : in  std_logic_vector(Nbit_a - 1 downto 0);
-            b_p_signed : in  std_logic_vector(Nbit_b - 1 downto 0);
-            p_signed   : out std_logic_vector(Nbit_a + Nbit_b - 1 downto 0)
+            a_p : in  std_logic_vector(Nbit_a - 1 downto 0);
+            b_p : in  std_logic_vector(Nbit_b - 1 downto 0);
+            p   : out std_logic_vector(Nbit_a + Nbit_b - 1 downto 0)
         );
-    end component Parallel_Multiplier;
+    end component Unsigned_Parallel_Multiplier;
 begin
     
         clk_tb <= (not(clk_tb) and end_sim) after T_CLK / 2;  -- The clock toggles after T_CLK / 2 when end_sim is high. When end_sim is forced low, the clock stops toggling and the simulation ends.
         rst_tb <= '1' after T_RESET; -- Deasserting the reset after T_RESET nanosecods (remember: the reset is active low).
       
-        test_parallel_multiplier:  Parallel_Multiplier
+        test_parallel_multiplier: Unsigned_Parallel_Multiplier
             generic map(
                 Nbit_a => N_BIT_A,
                 Nbit_b => N_BIT_B
             )
             port map(
-                a_p_signed => a_tb,
-                b_p_signed => b_tb,
-                p_signed   => p_tb
+                a_p => a_tb,
+                b_p => b_tb,
+                p   => p_tb
             );
      
       
@@ -69,11 +69,11 @@ begin
                 
                 end case;
                 case(modt_b) is
-                    when 0 => b_tb <= std_logic_vector(signed(b_tb) +1);
+                    when 0 => b_tb <= std_logic_vector(unsigned(b_tb) +1);
                     when others => null; -- Specifying that nothing happens in the other cases
                 end case;
                 case(modt_a) is
-                    when 0 => a_tb <= std_logic_vector(signed(a_tb) + 1);
+                    when 0 => a_tb <= std_logic_vector(unsigned(a_tb) + 1);
                     when others => null; -- Specifying that nothing happens in the other cases
                 end case;    
                 t := t + 1; -- the variable is updated exactly here (try to move this statement before the "case(t) is" one and watch the difference in the simulation)
