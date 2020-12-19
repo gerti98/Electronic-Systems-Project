@@ -37,7 +37,7 @@ architecture rtl of Ripple_Carry_Adder_Pipelined is
     end component DFF;
     
     signal carry_signal: std_logic_vector(Nbit-1 downto 1);
-    signal dff_signal: std_logic_vector(Nbit-1 downto 1);
+    signal dff_signal: std_logic_vector(Nbit-1 downto 0) := (others => '0');
     
 begin
 

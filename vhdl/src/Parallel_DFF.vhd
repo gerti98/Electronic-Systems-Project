@@ -2,7 +2,7 @@ library ieee;
     use ieee.std_logic_1164.all;
 
 entity Parallel_DFF is
-    generic (Nbit: integer := 12);
+    generic (Nbit: integer);
     port(
         d_dff: in std_logic_vector(Nbit-1 downto 0);
         clk_dff: in std_logic;
