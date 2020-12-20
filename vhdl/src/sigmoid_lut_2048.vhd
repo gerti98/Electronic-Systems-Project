@@ -2,12 +2,12 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity ddfs_lut_2048 is
+entity sigmoid_lut_2048 is
   port (
     address : in  std_logic_vector(11 downto 0);
     dds_out : out std_logic_vector(15 downto 0) 
   );
-end ddfs_lut_2048;
+end sigmoid_lut_2048;
 
 
 -- Output between [-11; +11], rapresented with fixed point
@@ -23,8 +23,9 @@ end ddfs_lut_2048;
 --
 -- What to store in the lut? round(f(x)/LSB(out)) for x in [0; 2047]*LSB(in)
 
-architecture rtl of ddfs_lut_2048 is
-type LUT_t is array (natural range 0 to 2048) of integer(
+architecture rtl of sigmoid_lut_2048 is
+type LUT_t is array (natural range 0 to 2047) of integer;
+constant LUT: LUT_t := (
     0 => 16384,
     1 => 16428,
     2 => 16472,
@@ -2072,9 +2073,9 @@ type LUT_t is array (natural range 0 to 2048) of integer(
     2044 => 32766,
     2045 => 32766,
     2046 => 32766,
-    2047 => 32766,
+    2047 => 32766
 );
 
 begin
-  dds_out <= std_logic_vector(to_signed(LUT(to_integer(unsigned(address))),16));
+  dds_out <= std_logic_vector(TO_SIGNED(LUT(TO_INTEGER(unsigned(address))),16));
 end rtl;
