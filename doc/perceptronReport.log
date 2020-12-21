@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.24)  19 DEC 2020 10:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.24)  21 DEC 2020 18:37
 entering extended mode
 **./perceptronReport.tex
 (perceptronReport.tex
@@ -447,62 +447,71 @@ d.pdf>]
 \openout2 = `chapters/vhdl_code.aux'.
 
 
-(chapters/vhdl_code.tex) [12
+(chapters/vhdl_code.tex
+(C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+[12
 
 
 
-]
+] [13] [14] [15] [16] [17] [18] [19] [20] [21]
+(C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+[22]) [23]
 \openout2 = `chapters/test_plan.aux'.
 
- (chapters/test_plan.tex) [13
+ (chapters/test_plan.tex) [24
 
 
 
 ]
 \openout2 = `chapters/xilinx_report.aux'.
 
-
-(chapters/xilinx_report.tex) [14
+ (chapters/xilinx_report.tex) [25
 
 
 
 ]
 \openout2 = `chapters/conclusion.aux'.
 
- (chapters/conclusion.tex) [15
+
+(chapters/conclusion.tex) [26
 
 
 
-]
-(perceptronReport.aux (chapters/introduction.aux) (chapters/architecture.aux)
-(chapters/vhdl_code.aux) (chapters/test_plan.aux) (chapters/xilinx_report.aux)
-(chapters/conclusion.aux)) ) 
+] (perceptronReport.aux (chapters/introduction.aux) (chapters/architecture.aux)
+ (chapters/vhdl_code.aux) (chapters/test_plan.aux) (chapters/xilinx_report.aux)
+ (chapters/conclusion.aux)) ) 
 Here is how much of TeX's memory you used:
- 6825 strings out of 480236
- 108550 string characters out of 2880557
- 422075 words of memory out of 3000000
- 23269 multiletter control sequences out of 15000+200000
- 541717 words of font info for 51 fonts, out of 3000000 for 9000
+ 7484 strings out of 480236
+ 115122 string characters out of 2880557
+ 931388 words of memory out of 3000000
+ 23920 multiletter control sequences out of 15000+200000
+ 542054 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,8n,77p,860b,327s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\gxhan\AppData\Local\MiKTeX\fonts/pk/ljfo
-ur/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/gxhan/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/gxhan/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/gxhan/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/gxhan/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Use
-rs/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb
-><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mmi8.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmr12.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmr17.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmr8.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gxhan/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/gxhan/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on perceptronReport.pdf (16 pages, 481433 bytes).
+ 70i,8n,77p,860b,1849s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\gxhan\AppData\Local\MiKTeX\fonts/pk/ljf
+our/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/gxhan/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/gxhan/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/gxhan/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/gxhan
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Us
+ers/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pf
+b><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmmi8.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmr12.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmr17.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmr6.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/gxhan/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gxhan/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/gxhan/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/gxh
+an/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on perceptronReport.pdf (27 pages, 545316 bytes).
 PDF statistics:
- 209 PDF objects out of 1000 (max. 8388607)
+ 254 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

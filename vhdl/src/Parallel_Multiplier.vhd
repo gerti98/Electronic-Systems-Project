@@ -16,6 +16,7 @@ entity Parallel_Multiplier is
 end entity Parallel_Multiplier;
 
 architecture rtl of Parallel_Multiplier is
+
     -- Building blocks of the Parallel Multiplier
     component Unsigned_Parallel_Multiplier
         generic(
@@ -29,20 +30,26 @@ architecture rtl of Parallel_Multiplier is
         );
     end component Unsigned_Parallel_Multiplier;
     
-    --signal temp: std_logic_vector(Nbit_a + Nbit_b - 1 downto 0);
+	
+	-- Unsigned component (will work for the unsigned parallel multiplier
     signal p_unsigned: std_logic_vector(Nbit_a + Nbit_b - 1 downto 0);
     signal a_p_unsigned: std_logic_vector(Nbit_a - 1 downto 0);
     signal b_p_unsigned: std_logic_vector(Nbit_b - 1 downto 0);
-    signal a_sign: std_logic;
+    
+	-- will carry the sign bit for the signed rapresentation of the inputs
+	signal a_sign: std_logic;
     signal b_sign: std_logic;
     
 begin
+
+	-- Compute the unsigned representation from the signed one
     a_p_unsigned <= std_logic_vector(abs(signed(a_p_signed)));
     b_p_unsigned <= std_logic_vector(abs(signed(b_p_signed)));
-    --temp <= not(p_unsigned);
     
+    -- 2's complement rapresentation, the result sign uis computed through the xor op. between a and b
     p_signed <= std_logic_vector(unsigned(not(p_unsigned)) + 1) when (((a_sign xor b_sign) = '1')) else p_unsigned;
-    --p_signed(Nbit_a + Nbit_b - 1) <= (a_sign xor b_sign);
+    
+	-- Getting of the sign from a and b (the MSB of the C2 representation)
     a_sign <= a_p_signed(Nbit_a - 1);
     b_sign <= b_p_signed(Nbit_b - 1);
     

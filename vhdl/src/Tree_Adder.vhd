@@ -3,6 +3,7 @@ use IEEE.std_logic_1164.all;
 
 entity Tree_Adder is
     port(
+        -- Inputs: result of the multiplication of xi*wi
         in_1: in std_logic_vector(16 downto 0);
         in_2: in std_logic_vector(16 downto 0);
         in_3: in std_logic_vector(16 downto 0);
@@ -13,9 +14,13 @@ entity Tree_Adder is
         in_8: in std_logic_vector(16 downto 0);
         in_9: in std_logic_vector(16 downto 0);
         in_10: in std_logic_vector(16 downto 0);
+        
+        -- Bias input
         b: in std_logic_vector(8 downto 0);
         clk: in std_logic;
         rst: in std_logic;
+        
+        -- Output
         z: out std_logic_vector(20 downto 0)
     );
 end Tree_Adder;

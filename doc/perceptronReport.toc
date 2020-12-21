@@ -8,6 +8,14 @@
 \contentsline {subsection}{\numberline {2.2}Adder Circuit Architecture}{8}{}%
 \contentsline {subsection}{\numberline {2.3}Activation Function Circuit Architecture}{11}{}%
 \contentsline {section}{\numberline {3}VHDL CODE}{12}{}%
-\contentsline {section}{\numberline {4}Test Plan}{13}{}%
-\contentsline {section}{\numberline {5}XILINX VIVADO Report}{14}{}%
-\contentsline {section}{\numberline {6}Conclusion}{15}{}%
+\contentsline {subsection}{\numberline {3.1}Modules List}{12}{}%
+\contentsline {subsection}{\numberline {3.2}Perceptron}{12}{}%
+\contentsline {subsection}{\numberline {3.3}Parallel Multiplier}{13}{}%
+\contentsline {subsection}{\numberline {3.4}Unsigned Parallel Multiplier}{15}{}%
+\contentsline {subsection}{\numberline {3.5}Tree Adder}{19}{}%
+\contentsline {subsubsection}{\numberline {3.5.1}Ripple Carry Adder Pipelined}{20}{}%
+\contentsline {subsection}{\numberline {3.6}LUT}{21}{}%
+\contentsline {subsubsection}{\numberline {3.6.1}Lut generation code}{22}{}%
+\contentsline {section}{\numberline {4}Test Plan}{24}{}%
+\contentsline {section}{\numberline {5}XILINX VIVADO Report}{25}{}%
+\contentsline {section}{\numberline {6}Conclusion}{26}{}%
