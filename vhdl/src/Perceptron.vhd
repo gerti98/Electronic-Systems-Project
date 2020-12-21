@@ -4,6 +4,7 @@ use IEEE.numeric_std.all;
 entity Perceptron is
     port(
         
+        --Inputs xi of the perceptron with 8 bits
         x_1: in std_logic_vector(7 downto 0);
         x_2: in std_logic_vector(7 downto 0);
         x_3: in std_logic_vector(7 downto 0);
@@ -15,6 +16,7 @@ entity Perceptron is
         x_9: in std_logic_vector(7 downto 0);
         x_10: in std_logic_vector(7 downto 0);
         
+        --Inputs wi of the perceptron with 9 bits
         w_1: in std_logic_vector(8 downto 0);
         w_2: in std_logic_vector(8 downto 0);
         w_3: in std_logic_vector(8 downto 0);
@@ -26,15 +28,19 @@ entity Perceptron is
         w_9: in std_logic_vector(8 downto 0);
         w_10: in std_logic_vector(8 downto 0);
         
+        --bias of the perceptron with 9 bits
         b: in std_logic_vector(8 downto 0);
+
         clk: in std_logic;
         rst: in std_logic;
-        
+
+        -- output of the perceptron with sigmoid activation function
         f_z: out std_logic_vector(15 downto 0)
     );
 end Perceptron;
 
 architecture rtl of Perceptron is
+    -- Register to store intermediate results after the multiplication
     component Parallel_DFF
         generic(Nbit : integer);
         port(
@@ -45,6 +51,7 @@ architecture rtl of Perceptron is
         );
     end component Parallel_DFF;
     
+    -- Module that will compute the multiplication of two signed numbers
     component Parallel_Multiplier
         generic(
             Nbit_a : positive;
@@ -57,6 +64,7 @@ architecture rtl of Perceptron is
         );
     end component Parallel_Multiplier;
     
+    -- Module that will sum up the ten multiplication results with the bias
     component Tree_Adder
         port(
             in_1  : in  std_logic_vector(16 downto 0);
@@ -75,7 +83,8 @@ architecture rtl of Perceptron is
             z     : out std_logic_vector(20 downto 0)
         );
     end component Tree_Adder;
-    
+
+    -- Look Up table that will store all the possible outputs of the sigmoid function
     component sigmoid_lut_2048
         port(
             address : in  std_logic_vector(10 downto 0);
@@ -83,6 +92,7 @@ architecture rtl of Perceptron is
         );
     end component sigmoid_lut_2048;
     
+    -- Intermediate signals, inputs of the registers
     signal xw_1 : std_logic_vector(16 downto 0);
     signal xw_2 : std_logic_vector(16 downto 0);
     signal xw_3 : std_logic_vector(16 downto 0);
@@ -94,6 +104,7 @@ architecture rtl of Perceptron is
     signal xw_9 : std_logic_vector(16 downto 0);
     signal xw_10 : std_logic_vector(16 downto 0);
     
+    -- Intermediate signals, outputs of the registers
     signal xw_1_in : std_logic_vector(16 downto 0);
     signal xw_2_in : std_logic_vector(16 downto 0);
     signal xw_3_in : std_logic_vector(16 downto 0);
@@ -105,13 +116,22 @@ architecture rtl of Perceptron is
     signal xw_9_in : std_logic_vector(16 downto 0);
     signal xw_10_in : std_logic_vector(16 downto 0);
     
+    -- result of the tree adder, input of a register
     signal z : std_logic_vector(20 downto 0);
+
+    -- result of the tree adder, output of a register   
     signal z_in : std_logic_vector(20 downto 0);
+    
+    -- input of the lut, computed from z_in   
     signal z_in_lut: std_logic_vector(20 downto 0);
+
+    -- output of the lut, needs sign check
     signal f_z_todo : std_logic_vector(15 downto 0);
     
 begin
-    -- Multiplications
+    -- Multiplications: a structured approach was not possible due to the format of the inputs
+    -- In fact are not a single std_logic_vector, which would grant a possibility to exploit the
+    -- structured approach, but many std_logic_vector with 8 and 9 bits
     MUL_1: Parallel_Multiplier
         generic map(
             Nbit_a => 8,
@@ -333,6 +353,7 @@ begin
             z     => z
         );
         
+    -- Register after the Tree Adder
     REG_TREE: Parallel_DFF
         generic map(
             Nbit => 21
@@ -352,13 +373,17 @@ begin
     
     d_process: process(clk, rst)
     begin
+        -- If z, the candidate input of the sigmoid function, is negative,
+		-- then is passed his complement.
         if(z_in(20) = '1') then
             z_in_lut <= std_logic_vector(unsigned(not(z_in)) + 1);
         else
             z_in_lut <= z_in;
         end if;
         
-        --f_z <= std_logic_vector(32766 - unsigned(f_z_todo));
+        -- On the output side if the candidate input was negative
+		-- the output is complemented with the highest possible
+		-- number in the lut in order to mirror it
         if (z_in(20) = '1') then 
             f_z <= std_logic_vector(32766 - unsigned(f_z_todo));
         else

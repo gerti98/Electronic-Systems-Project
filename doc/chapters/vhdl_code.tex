@@ -39,26 +39,12 @@ The main hardware description of the architecture. This module will connect all 
 	
 		-- x_1 to x_10 inputs of the perceptron with 8 bits
 		x_1: in std_logic_vector(7 downto 0);
-		x_2: in std_logic_vector(7 downto 0);
-		x_3: in std_logic_vector(7 downto 0);
-		x_4: in std_logic_vector(7 downto 0);
-		x_5: in std_logic_vector(7 downto 0);
-		x_6: in std_logic_vector(7 downto 0);
-		x_7: in std_logic_vector(7 downto 0);
-		x_8: in std_logic_vector(7 downto 0);
-		x_9: in std_logic_vector(7 downto 0);
+		...
 		x_10: in std_logic_vector(7 downto 0);
 		
 		-- w_1 to w_10 inputs of the perceptron with 9 bits
 		w_1: in std_logic_vector(8 downto 0);
-		w_2: in std_logic_vector(8 downto 0);
-		w_3: in std_logic_vector(8 downto 0);
-		w_4: in std_logic_vector(8 downto 0);
-		w_5: in std_logic_vector(8 downto 0);
-		w_6: in std_logic_vector(8 downto 0);
-		w_7: in std_logic_vector(8 downto 0);
-		w_8: in std_logic_vector(8 downto 0);
-		w_9: in std_logic_vector(8 downto 0);
+		...
 		w_10: in std_logic_vector(8 downto 0);
 		
 		-- b input of the perceptron with 9 bits
@@ -71,9 +57,36 @@ The main hardware description of the architecture. This module will connect all 
 		f_z: out std_logic_vector(15 downto 0)
 	);
 	end Perceptron;
+architecture rtl of Perceptron is
+	...
+begin
+	...
+	d_process: process(clk, rst)
+	begin
+		-- If z, the candidate input of the sigmoid function, is negative,
+		-- then is passed his complement.
+		if(z_in(20) = '1') then
+			z_in_lut <= std_logic_vector(unsigned(not(z_in)) + 1);
+		else
+			z_in_lut <= z_in;
+		end if;
+		
+		
+		
+		-- On the output side if the candidate input was negative
+		-- the output is complemented with the highest possible
+		-- number in the lut in order to mirror it
+		if (z_in(20) = '1') then 
+			f_z <= std_logic_vector(32766 - unsigned(f_z_todo));
+		else
+			f_z <= std_logic_vector(unsigned(f_z_todo));
+		end if;
+	end process d_process;
+	
+end rtl; 
 \end{lstlisting}
 
-In the rest of this modules are instantiated and linked the various submodules that made up the \textbf{Perceptron} module.
+In the rest of this modules are instantiated and linked the various submodules that made up the \textbf{Perceptron} module. At the bottom of the previous code snippet is shown how the optimization of the LUT is made. 
 
 \subsection{Parallel Multiplier}
 This module has the duty to convert the inputs, which are signed with a 2's complement representation, link their unsigned representation with the \textbf{Unsigned Parallel Multiplier} module and then reconvert the product in the signed representation. The general architecture is shown in Figure 5.
@@ -206,27 +219,27 @@ This module will effectively compute a multiplication. Through the replication o
 			-- Column index j
 			GEN_b: for j in 1 to Nbit_b - 1 generate 
 				FIRST_ROW: if i=1 generate
-				-- In the first Row only HA
-				LEFT: if j < Nbit_b -1 generate
-				ROW1_LEFT: HALF_ADDER
-				port map
-				(
-				a    => a_multiplier(j - 1), 
-				b    => b_multiplier(j - 1), 
-				s    => sum_signal(j - 1), 
-				cout => carry_signal(j - 1) 
-				);
-				end generate LEFT;
-				RIGHT: if j = Nbit_b - 1 generate
-				ROW1_RIGHT: HALF_ADDER
-				port map
-				(
-				a    => a_multiplier(j - 1), 
-				b    => b_multiplier(j - 1), 
-				s    => p(1), -- Result bit 
-				cout => carry_signal(j - 1) 
-				);
-				end generate RIGHT; 
+					-- In the first Row only HA
+					LEFT: if j < Nbit_b -1 generate
+						ROW1_LEFT: HALF_ADDER
+							port map
+							(
+								a    => a_multiplier(j - 1), 
+								b    => b_multiplier(j - 1), 
+								s    => sum_signal(j - 1), 
+								cout => carry_signal(j - 1) 
+							);
+						end generate LEFT;
+					RIGHT: if j = Nbit_b - 1 generate
+						ROW1_RIGHT: HALF_ADDER
+							port map
+							(
+								a    => a_multiplier(j - 1), 
+								b    => b_multiplier(j - 1), 
+								s    => p(1), -- Result bit 
+								cout => carry_signal(j - 1) 
+							);
+					end generate RIGHT; 
 				end generate FIRST_ROW;
 				
 				
@@ -250,14 +263,7 @@ entity Tree_Adder is
 	port(
 		-- Inputs: result of the multiplication of xi*wi
 		in_1: in std_logic_vector(16 downto 0);
-		in_2: in std_logic_vector(16 downto 0);
-		in_3: in std_logic_vector(16 downto 0);
-		in_4: in std_logic_vector(16 downto 0);
-		in_5: in std_logic_vector(16 downto 0);
-		in_6: in std_logic_vector(16 downto 0);
-		in_7: in std_logic_vector(16 downto 0);
-		in_8: in std_logic_vector(16 downto 0);
-		in_9: in std_logic_vector(16 downto 0);
+		...
 		in_10: in std_logic_vector(16 downto 0);
 		
 		-- Bias input
@@ -347,7 +353,19 @@ end rtl;
 \end{lstlisting}
 
 \subsection{LUT}
-This module will store every possible output of the sigmoid function in the input range of $[-11; +11]$ with 12 bits of precision. The input will be treated as an address signal to obtain the correct output value in the same fashion as shown in the Laboratory lectures.
+This module will store every possible output of the sigmoid function in the input range of $[-11; +11]$ with 12 bits of precision and output range of $[0; 1]$ with 16 bits of precision. In order to do so a quantization is needed: is unthinkable to define precisely a rational number with a finite number of bits. To determine the quantized quantity of the input and the output there is a need to calculate the weight of the LSB in that range. Through the \textbf{Reach the LSB} method seen during the Lab lectures, the LSB, with N bits of precision, can be calculated as:
+\begin{equation}
+LSB = \frac{\max{x}}{2^{N-1}-1}\ \ or\ \ \frac{|\min{x}|}{2^{N-1}}
+\end{equation}
+So, in out case:
+\begin{equation}
+LSB(in) = \frac{11}{2^{11} - 1} = 0.005373717
+\end{equation}
+\begin{equation}
+LSB(out) = \frac{1}{2^{15} -1} = 3.051850947e-5
+\end{equation}
+The Look-Up table will store the values $round(f(x)/LSB/out)$ for $x$ in $[0; 2047]$.\\
+The input will be treated as an address signal to obtain the correct output value in the same fashion as shown in the Laboratory lectures.
 \begin{lstlisting}[language=VHDL]
 entity sigmoid_lut_2048 is
 	port (
@@ -355,17 +373,6 @@ entity sigmoid_lut_2048 is
 		dds_out : out std_logic_vector(15 downto 0) 
 	);
 end sigmoid_lut_2048;
-
-
--- Output between [-11; +11], rapresented with fixed point 
--- [Reach the LSB method]
--- LSB(in) = (11)/(2^11 - 1) = 0.00537371763556424035173424523693
--- LSB(out) = (1)/(2^15 - 1) = 3.0518509475997192297128208258309e-5
--- inputs -> [-11, +11] 
--- outputs -> [0, 1]
--- Q(f(x)) = round(f(x)/LSB(out))*LSB(out)
---
--- What to store in the lut? round(f(x)/LSB(out)) for x in [0; 2047]*LSB(in)
 
 architecture rtl of sigmoid_lut_2048 is
 	type LUT_t is array (natural range 0 to 2047) of integer;

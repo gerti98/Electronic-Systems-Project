@@ -17,6 +17,7 @@ entity Tree_Adder is
         
         -- Bias input
         b: in std_logic_vector(8 downto 0);
+
         clk: in std_logic;
         rst: in std_logic;
         
@@ -26,6 +27,7 @@ entity Tree_Adder is
 end Tree_Adder;
 
 architecture rtl of Tree_Adder is 
+    -- Building block that will perform the single summation
     component Ripple_Carry_Adder_Pipelined
         generic(Nbit : positive);
         port(
@@ -39,6 +41,7 @@ architecture rtl of Tree_Adder is
         );
     end component Ripple_Carry_Adder_Pipelined;
     
+    -- Output of each Ripple carry Adder will be stored in a register
     component Parallel_DFF
         generic(Nbit : integer);
         port(
@@ -48,6 +51,8 @@ architecture rtl of Tree_Adder is
             q_dff      : out std_logic_vector(Nbit - 1 downto 0)
         );
     end component Parallel_DFF;       
+
+    -- Intermediate signals for every level of the tree adder
     signal first_level_out1: std_logic_vector(17 downto 0);
     signal first_level_out2: std_logic_vector(17 downto 0);
     signal first_level_out3: std_logic_vector(17 downto 0);
@@ -73,7 +78,9 @@ architecture rtl of Tree_Adder is
     signal fourth_level_in2: std_logic_vector(19 downto 0);
     
 begin
-    -- In order to not add some signals to write better code I will just port map every component
+    -- A Structured approach was not possible due to the format of the inputs
+    -- In fact there is not a single std_logic_vector, which would grant a possibility to exploit the
+    -- structured approach, but many std_logic_vector with 17 bits
     -- FIRST LEVEL
     sum_1_1: Ripple_Carry_Adder_Pipelined
         generic map(

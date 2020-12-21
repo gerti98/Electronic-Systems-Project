@@ -9,6 +9,7 @@ entity Parallel_Multiplier is
         Nbit_b: positive
     );
     port(
+        -- Operands that will be multiplied
         a_p_signed: in std_logic_vector(Nbit_a - 1 downto 0);
         b_p_signed: in std_logic_vector(Nbit_b - 1 downto 0);
         

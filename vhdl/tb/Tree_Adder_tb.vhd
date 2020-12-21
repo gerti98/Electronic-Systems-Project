@@ -2,11 +2,11 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity Tree_Adder_tb is   -- The testbench has no interface, so it is an empty entity (Be careful: the keyword "is" was missing in the code written in class).
+entity Tree_Adder_tb is  
 end Tree_Adder_tb;
 
 
-architecture bhv of Tree_Adder_tb is -- Testbench architecture declaration
+architecture bhv of Tree_Adder_tb is 
     -----------------------------------------------------------------------------------
     -- Testbench constants
     -----------------------------------------------------------------------------------
@@ -57,8 +57,8 @@ architecture bhv of Tree_Adder_tb is -- Testbench architecture declaration
     end component Tree_Adder;
 begin
     
-        clk_tb <= (not(clk_tb) and end_sim) after T_CLK / 2;  -- The clock toggles after T_CLK / 2 when end_sim is high. When end_sim is forced low, the clock stops toggling and the simulation ends.
-        rst_tb <= '1' after T_RESET; -- Deasserting the reset after T_RESET nanosecods (remember: the reset is active low).
+        clk_tb <= (not(clk_tb) and end_sim) after T_CLK / 2; 
+        rst_tb <= '1' after T_RESET; 
       
         test_tree_adder: Tree_Adder
             port map(
@@ -79,16 +79,19 @@ begin
             );
      
       
-        d_process: process(clk_tb, rst_tb) -- process used to make the testbench signals change synchronously with the rising edge of the clock
-        variable t : integer := 0; -- variable used to count the clock cycle after the reset
+        d_process: process(clk_tb, rst_tb) -
+        variable t : integer := 0;
+        
+        -- Variables that will be used to handle the incrementation of the inputs with a different velocity
+        -- in order to see different outputs
         variable modt_b: integer := 0;
         begin    
             if(rst_tb = '0') then
                 t := 0;
             elsif(rising_edge(clk_tb)) then
-                case(t) is   -- specifying the input a_tb, b_tb and end_sim depending on the value of t ( and so on the number of the passed clock cycles).
-                    when 40000 => end_sim <= '0'; -- This command stops the simulation when t = 10
-                    when others => null; -- Specifying that nothing happens in the other cases 
+                case(t) is  
+                    when 40000 => end_sim <= '0'; 
+                    when others => null;
                 
                 end case;
                 case(modt_b) is
@@ -104,9 +107,9 @@ begin
                         in_9_tb <= std_logic_vector(signed(in_9_tb) +1);
                         in_10_tb <= std_logic_vector(signed(in_10_tb) +1);
                         b_tb <= std_logic_vector(signed(b_tb) + 1);
-                    when others => null; -- Specifying that nothing happens in the other cases
+                    when others => null; 
                 end case;
-                t := t + 1; -- the variable is updated exactly here (try to move this statement before the "case(t) is" one and watch the difference in the simulation)
+                t := t + 1; 
                 modt_b := (t mod 10);
             end if;
         end process d_process;
