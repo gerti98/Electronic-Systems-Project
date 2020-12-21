@@ -107,6 +107,7 @@ architecture rtl of Perceptron is
     
     signal z : std_logic_vector(20 downto 0);
     signal z_in : std_logic_vector(20 downto 0);
+    signal z_in_lut: std_logic_vector(20 downto 0);
     signal f_z_todo : std_logic_vector(15 downto 0);
     
 begin
@@ -331,6 +332,7 @@ begin
             rst   => rst,
             z     => z
         );
+        
     REG_TREE: Parallel_DFF
         generic map(
             Nbit => 21
@@ -341,20 +343,26 @@ begin
             resetn_dff => rst,
             q_dff      => z_in
         );
-    
-    
+        
     LUT: sigmoid_lut_2048
         port map(
-            address => z_in(20 downto 10),
+            address => z_in_lut(19 downto 9),
             dds_out => f_z_todo
         );
     
     d_process: process(clk, rst)
     begin
+        if(z_in(20) = '1') then
+            z_in_lut <= std_logic_vector(unsigned(not(z_in)) + 1);
+        else
+            z_in_lut <= z_in;
+        end if;
+        
+        --f_z <= std_logic_vector(32766 - unsigned(f_z_todo));
         if (z_in(20) = '1') then 
             f_z <= std_logic_vector(32766 - unsigned(f_z_todo));
         else
-            f_z <= f_z_todo;
+            f_z <= std_logic_vector(unsigned(f_z_todo));
         end if;
     end process d_process;
     

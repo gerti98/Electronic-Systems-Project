@@ -2,11 +2,11 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity Perceptron_tb is   -- The testbench has no interface, so it is an empty entity (Be careful: the keyword "is" was missing in the code written in class).
-end Perceptron_tb;
+entity Perceptron_tb_4 is   -- The testbench has no interface, so it is an empty entity (Be careful: the keyword "is" was missing in the code written in class).
+end Perceptron_tb_4;
 
 
-architecture bhv of Perceptron_tb is -- Testbench architecture declaration
+architecture bhv of Perceptron_tb_4 is -- Testbench architecture declaration
     -----------------------------------------------------------------------------------
     -- Testbench constants
     -----------------------------------------------------------------------------------
@@ -16,29 +16,30 @@ architecture bhv of Perceptron_tb is -- Testbench architecture declaration
     -----------------------------------------------------------------------------------
     -- Testbench signals
     -----------------------------------------------------------------------------------
+    -- All min negative test
     
-    signal x_1_tb : std_logic_vector(7 downto 0) := "00000000";
-    signal x_2_tb : std_logic_vector(7 downto 0) := "00000000";
-    signal x_3_tb : std_logic_vector(7 downto 0) := "00000000";
-    signal x_4_tb : std_logic_vector(7 downto 0) := "00000000";
-    signal x_5_tb : std_logic_vector(7 downto 0) := "00000000";
-    signal x_6_tb : std_logic_vector(7 downto 0) := "00000000";
-    signal x_7_tb : std_logic_vector(7 downto 0) := "00000000";
-    signal x_8_tb : std_logic_vector(7 downto 0) := "00000000";
-    signal x_9_tb : std_logic_vector(7 downto 0) := "00000000";
-    signal x_10_tb : std_logic_vector(7 downto 0) := "00000000";
+    signal x_1_tb : std_logic_vector(7 downto 0) := "10000000";
+    signal x_2_tb : std_logic_vector(7 downto 0) := "10000000";
+    signal x_3_tb : std_logic_vector(7 downto 0) := "10000000";
+    signal x_4_tb : std_logic_vector(7 downto 0) := "10000000";
+    signal x_5_tb : std_logic_vector(7 downto 0) := "10000000";
+    signal x_6_tb : std_logic_vector(7 downto 0) := "10000000";
+    signal x_7_tb : std_logic_vector(7 downto 0) := "10000000";
+    signal x_8_tb : std_logic_vector(7 downto 0) := "10000000";
+    signal x_9_tb : std_logic_vector(7 downto 0) := "10000000";
+    signal x_10_tb : std_logic_vector(7 downto 0) := "10000000";
     
-    
-    signal w_1_tb : std_logic_vector(8 downto 0) := "000000000";
-    signal w_2_tb : std_logic_vector(8 downto 0) := "000000000";
-    signal w_3_tb : std_logic_vector(8 downto 0) := "000000000";
-    signal w_4_tb : std_logic_vector(8 downto 0) := "000000000";
-    signal w_5_tb : std_logic_vector(8 downto 0) := "000000000";
-    signal w_6_tb : std_logic_vector(8 downto 0) := "000000000";
-    signal w_7_tb : std_logic_vector(8 downto 0) := "000000000";
-    signal w_8_tb : std_logic_vector(8 downto 0) := "000000000";
-    signal w_9_tb : std_logic_vector(8 downto 0) := "000000000";
-    signal w_10_tb : std_logic_vector(8 downto 0) := "000000000";
+   
+    signal w_1_tb : std_logic_vector(8 downto 0) := "011111111";
+    signal w_2_tb : std_logic_vector(8 downto 0) := "011111111";
+    signal w_3_tb : std_logic_vector(8 downto 0) := "011111111";
+    signal w_4_tb : std_logic_vector(8 downto 0) := "011111111";
+    signal w_5_tb : std_logic_vector(8 downto 0) := "011111111";
+    signal w_6_tb : std_logic_vector(8 downto 0) := "011111111";
+    signal w_7_tb : std_logic_vector(8 downto 0) := "011111111";
+    signal w_8_tb : std_logic_vector(8 downto 0) := "011111111";
+    signal w_9_tb : std_logic_vector(8 downto 0) := "011111111";
+    signal w_10_tb : std_logic_vector(8 downto 0) := "011111111";
     
     
     signal b_tb : std_logic_vector(8 downto 0) := "000000000";

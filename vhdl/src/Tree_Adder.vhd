@@ -239,16 +239,8 @@ begin
         )
         port map(
             a_r    => second_level_in5,
-            b_r(8 downto 0) => b,
-            b_r(9) => b(8),
-            b_r(10) => b(8),
-            b_r(11) => b(8),
-            b_r(12) => b(8),
-            b_r(13) => b(8),
-            b_r(14) => b(8),
-            b_r(15) => b(8),
-            b_r(16) => b(8),
-            b_r(17) => b(8),
+            b_r(8 downto 0) => "000000000",
+            b_r(17 downto 9) => b,
             cin_r  => '0',
             cout_r => open,
             s_r    => second_level_out3,

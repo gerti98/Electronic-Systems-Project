@@ -2,11 +2,11 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity Perceptron_tb is   -- The testbench has no interface, so it is an empty entity (Be careful: the keyword "is" was missing in the code written in class).
-end Perceptron_tb;
+entity Perceptron_tb_2 is   -- The testbench has no interface, so it is an empty entity (Be careful: the keyword "is" was missing in the code written in class).
+end Perceptron_tb_2;
 
 
-architecture bhv of Perceptron_tb is -- Testbench architecture declaration
+architecture bhv of Perceptron_tb_2 is -- Testbench architecture declaration
     -----------------------------------------------------------------------------------
     -- Testbench constants
     -----------------------------------------------------------------------------------
@@ -17,7 +17,7 @@ architecture bhv of Perceptron_tb is -- Testbench architecture declaration
     -- Testbench signals
     -----------------------------------------------------------------------------------
     
-    signal x_1_tb : std_logic_vector(7 downto 0) := "00000000";
+    signal x_1_tb : std_logic_vector(7 downto 0) := "01111111";
     signal x_2_tb : std_logic_vector(7 downto 0) := "00000000";
     signal x_3_tb : std_logic_vector(7 downto 0) := "00000000";
     signal x_4_tb : std_logic_vector(7 downto 0) := "00000000";
@@ -28,8 +28,8 @@ architecture bhv of Perceptron_tb is -- Testbench architecture declaration
     signal x_9_tb : std_logic_vector(7 downto 0) := "00000000";
     signal x_10_tb : std_logic_vector(7 downto 0) := "00000000";
     
-    
-    signal w_1_tb : std_logic_vector(8 downto 0) := "000000000";
+   
+    signal w_1_tb : std_logic_vector(8 downto 0) := "011111111";
     signal w_2_tb : std_logic_vector(8 downto 0) := "000000000";
     signal w_3_tb : std_logic_vector(8 downto 0) := "000000000";
     signal w_4_tb : std_logic_vector(8 downto 0) := "000000000";
