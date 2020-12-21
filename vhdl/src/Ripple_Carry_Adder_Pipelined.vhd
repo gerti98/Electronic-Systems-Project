@@ -1,8 +1,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
--- Realize a Ripple Carry Adder in a structural way
-
 entity Ripple_Carry_Adder_Pipelined is
     generic (Nbit: positive);
     port(
@@ -41,7 +39,10 @@ architecture rtl of Ripple_Carry_Adder_Pipelined is
         );
     end component DFF;
     
+    -- Will propagate the carry signal among the whole architecture  
     signal carry_signal: std_logic_vector(Nbit-1 downto 1);
+
+    -- Will store the outputs signal of the registers 
     signal dff_signal: std_logic_vector(Nbit-1 downto 0) := (others => '0');
     
 begin

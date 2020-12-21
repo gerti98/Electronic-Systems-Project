@@ -30,487 +30,367 @@ As presented in the last chapter, I have followed a similar approach for creatin
 	\end{itemize}
 \end{itemize}
 
-A \textbf{bottom-up strategy} was followed in order to build the architecture: starting from the some modules that will made up the architecture and after finishing each of them some testbenches were written in order to test each building block of the \textbf{Perceptron} (See next chapter for details).
+A \textbf{bottom-up strategy} was followed in order to build up the architecture: starting from some modules that will made up the architecture, after finishing each of them some testbenches were written in order to test each building block of the \textbf{Perceptron} (See next chapter for details).
 \subsection{Perceptron}
-The main hardware description of the architecture. In order to not show too much lines of code only the entity definition of this module will be shown.
+The main hardware description of the architecture. This module will connect all the other modules in order to create the correct architecture. In order to not show too much lines of code only the entity definition of this module will be shown.
 \begin{lstlisting}[language=VHDL]
-	library IEEE;
-	use IEEE.std_logic_1164.all;
-	use IEEE.numeric_std.all;
 	entity Perceptron is
 	port(
 	
-	-- x_1 to x_10 inputs of the perceptron with 8 bits
-	x_1: in std_logic_vector(7 downto 0);
-	x_2: in std_logic_vector(7 downto 0);
-	x_3: in std_logic_vector(7 downto 0);
-	x_4: in std_logic_vector(7 downto 0);
-	x_5: in std_logic_vector(7 downto 0);
-	x_6: in std_logic_vector(7 downto 0);
-	x_7: in std_logic_vector(7 downto 0);
-	x_8: in std_logic_vector(7 downto 0);
-	x_9: in std_logic_vector(7 downto 0);
-	x_10: in std_logic_vector(7 downto 0);
-	
-	-- w_1 to w_10 inputs of the perceptron with 9 bits
-	w_1: in std_logic_vector(8 downto 0);
-	w_2: in std_logic_vector(8 downto 0);
-	w_3: in std_logic_vector(8 downto 0);
-	w_4: in std_logic_vector(8 downto 0);
-	w_5: in std_logic_vector(8 downto 0);
-	w_6: in std_logic_vector(8 downto 0);
-	w_7: in std_logic_vector(8 downto 0);
-	w_8: in std_logic_vector(8 downto 0);
-	w_9: in std_logic_vector(8 downto 0);
-	w_10: in std_logic_vector(8 downto 0);
-	
-	-- b input of the perceptron with 9 bits
-	b: in std_logic_vector(8 downto 0);
-	
-	clk: in std_logic;
-	rst: in std_logic;
-	
-	-- output of the perceptron 16 bits
-	f_z: out std_logic_vector(15 downto 0)
+		-- x_1 to x_10 inputs of the perceptron with 8 bits
+		x_1: in std_logic_vector(7 downto 0);
+		x_2: in std_logic_vector(7 downto 0);
+		x_3: in std_logic_vector(7 downto 0);
+		x_4: in std_logic_vector(7 downto 0);
+		x_5: in std_logic_vector(7 downto 0);
+		x_6: in std_logic_vector(7 downto 0);
+		x_7: in std_logic_vector(7 downto 0);
+		x_8: in std_logic_vector(7 downto 0);
+		x_9: in std_logic_vector(7 downto 0);
+		x_10: in std_logic_vector(7 downto 0);
+		
+		-- w_1 to w_10 inputs of the perceptron with 9 bits
+		w_1: in std_logic_vector(8 downto 0);
+		w_2: in std_logic_vector(8 downto 0);
+		w_3: in std_logic_vector(8 downto 0);
+		w_4: in std_logic_vector(8 downto 0);
+		w_5: in std_logic_vector(8 downto 0);
+		w_6: in std_logic_vector(8 downto 0);
+		w_7: in std_logic_vector(8 downto 0);
+		w_8: in std_logic_vector(8 downto 0);
+		w_9: in std_logic_vector(8 downto 0);
+		w_10: in std_logic_vector(8 downto 0);
+		
+		-- b input of the perceptron with 9 bits
+		b: in std_logic_vector(8 downto 0);
+		
+		clk: in std_logic;
+		rst: in std_logic;
+		
+		-- output of the perceptron 16 bits
+		f_z: out std_logic_vector(15 downto 0)
 	);
 	end Perceptron;
 \end{lstlisting}
 
-In the rest of this modules are instantiated and linked the various submodule that made up the \textbf{Perceptron} module.
+In the rest of this modules are instantiated and linked the various submodules that made up the \textbf{Perceptron} module.
 
 \subsection{Parallel Multiplier}
+This module has the duty to convert the inputs, which are signed with a 2's complement representation, link their unsigned representation with the \textbf{Unsigned Parallel Multiplier} module and then reconvert the product in the signed representation. The general architecture is shown in Figure 5.
 \begin{lstlisting}[language=VHDL]
-	library IEEE;
-	use IEEE.std_logic_1164.all;
-	use ieee.numeric_std.all;
-	
-	
 	entity Parallel_Multiplier is
-	generic (
-	Nbit_a : positive; 
-	Nbit_b: positive
-	);
-	port(
-	a_p_signed: in std_logic_vector(Nbit_a - 1 downto 0);
-	b_p_signed: in std_logic_vector(Nbit_b - 1 downto 0);
-	p_signed: out std_logic_vector(Nbit_a + Nbit_b - 1 downto 0)
-	);
+		generic (
+			Nbit_a : positive; 
+			Nbit_b: positive
+		);
+		port(
+			a_p_signed: in std_logic_vector(Nbit_a - 1 downto 0);
+			b_p_signed: in std_logic_vector(Nbit_b - 1 downto 0);
+			-- The product will need Nbit_a + Nbit_b bits
+			p_signed: out std_logic_vector(Nbit_a + Nbit_b - 1 downto 0)
+		);
 	end entity Parallel_Multiplier;
 	
 	architecture rtl of Parallel_Multiplier is
 	
-	-- Building blocks of the Parallel Multiplier
-	component Unsigned_Parallel_Multiplier
-	generic(
-	Nbit_a : positive;
-	Nbit_b : positive
-	);
-	port(
-	a_p: in  std_logic_vector(Nbit_a - 1 downto 0);
-	b_p : in  std_logic_vector(Nbit_b - 1 downto 0);
-	p   : out std_logic_vector(Nbit_a + Nbit_b - 1 downto 0)
-	);
-	end component Unsigned_Parallel_Multiplier;
-	
-	
-	-- Unsigned component (will work for the unsigned parallel multiplier
-	signal p_unsigned: std_logic_vector(Nbit_a + Nbit_b - 1 downto 0);
-	signal a_p_unsigned: std_logic_vector(Nbit_a - 1 downto 0);
-	signal b_p_unsigned: std_logic_vector(Nbit_b - 1 downto 0);
-	
-	-- will carry the sign bit for the signed rapresentation of the inputs
-	signal a_sign: std_logic;
-	signal b_sign: std_logic;
-	
+		-- Building blocks of the Parallel Multiplier
+		component Unsigned_Parallel_Multiplier
+			generic(
+				Nbit_a : positive;
+				Nbit_b : positive
+			);
+			port(
+				a_p: in  std_logic_vector(Nbit_a - 1 downto 0);
+				b_p : in  std_logic_vector(Nbit_b - 1 downto 0);
+				p   : out std_logic_vector(Nbit_a + Nbit_b - 1 downto 0)
+			);
+		end component Unsigned_Parallel_Multiplier;
+		
+		
+		-- Unsigned component (will work for the unsigned parallel multiplier
+		signal p_unsigned: std_logic_vector(Nbit_a + Nbit_b - 1 downto 0);
+		signal a_p_unsigned: std_logic_vector(Nbit_a - 1 downto 0);
+		signal b_p_unsigned: std_logic_vector(Nbit_b - 1 downto 0);
+		
+		-- will carry the sign bit for the signed rapresentation of the inputs
+		signal a_sign: std_logic;
+		signal b_sign: std_logic;
+		
 	begin
 	
-	-- Compute the unsigned representation from the signed one
-	a_p_unsigned <= std_logic_vector(abs(signed(a_p_signed)));
-	b_p_unsigned <= std_logic_vector(abs(signed(b_p_signed)));
-	
-	-- 2's complement rapresentation, the result sign uis computed through the xor op. between a and b
-	p_signed <= std_logic_vector(unsigned(not(p_unsigned)) + 1) when (((a_sign xor b_sign) = '1')) else p_unsigned;
-	
-	-- Getting of the sign from a and b (the MSB of the C2 representation)
-	a_sign <= a_p_signed(Nbit_a - 1);
-	b_sign <= b_p_signed(Nbit_b - 1);
-	
-	unsigned_parallel_mul: Unsigned_Parallel_Multiplier
-	generic map(
-	Nbit_a => Nbit_a,
-	Nbit_b => Nbit_b
-	)
-	port map(
-	a_p =>  a_p_unsigned,
-	b_p =>  b_p_unsigned,
-	p   => p_unsigned
-	);
-	
+		-- Compute the unsigned representation from the signed one
+		a_p_unsigned <= std_logic_vector(abs(signed(a_p_signed)));
+		b_p_unsigned <= std_logic_vector(abs(signed(b_p_signed)));
+		
+		-- 2's complement rapresentation, the result sign uis computed through the xor op. between a and b
+		p_signed <= std_logic_vector(unsigned(not(p_unsigned)) + 1) when (((a_sign xor b_sign) = '1')) else p_unsigned;
+		
+		-- Getting of the sign from a and b (the MSB of the C2 representation)
+		a_sign <= a_p_signed(Nbit_a - 1);
+		b_sign <= b_p_signed(Nbit_b - 1);
+		
+		unsigned_parallel_mul: Unsigned_Parallel_Multiplier
+			generic map(
+				Nbit_a => Nbit_a,
+				Nbit_b => Nbit_b
+			)
+			port map(
+				a_p =>  a_p_unsigned,
+				b_p =>  b_p_unsigned,
+				p   => p_unsigned
+			);
+		
 	end architecture rtl; 
 \end{lstlisting}
 
 \subsection{Unsigned Parallel Multiplier}
+This module will effectively compute a multiplication. Through the replication of the architecture shown in Figure 6 and 7 this module will return the \textit{unsigned product} of two \textit{unsigned operands}. In order to implement the architecture in the simplest way a \textbf{Structured approach} has been followed in the description. Some lines of code were just skipped in order to show only a general schema, for further details there is also the source code.
 \begin{lstlisting}[language=VHDL]
-	library IEEE;
-	use IEEE.std_logic_1164.all;
-	
 	entity Unsigned_Parallel_Multiplier is
-	generic (
-	Nbit_a : positive; 
-	Nbit_b: positive
-	);
-	port(
-	-- Unsigned representation of inputs
-	a_p: in std_logic_vector(Nbit_a - 1 downto 0);
-	b_p: in std_logic_vector(Nbit_b - 1 downto 0);
-	
-	-- p = a_p * b_p
-	p: out std_logic_vector(Nbit_a + Nbit_b - 1 downto 0)
-	);
+		generic (
+			Nbit_a : positive; 
+			Nbit_b: positive
+		);
+		port(
+			-- Unsigned representation of inputs
+			a_p: in std_logic_vector(Nbit_a - 1 downto 0);
+			b_p: in std_logic_vector(Nbit_b - 1 downto 0);
+			
+			-- p = a_p * b_p
+			p: out std_logic_vector(Nbit_a + Nbit_b - 1 downto 0)
+		);
 	end entity Unsigned_Parallel_Multiplier;
 	
 	architecture rtl of Unsigned_Parallel_Multiplier is
-	-- Building blocks of the Unsigned Parallel Multiplier
-	component FULL_ADDER is
-	port
-	(
-	a    : IN std_logic ;
-	b    : IN std_logic ;
-	cin  : IN std_logic ;
-	s    : OUT std_logic ;
-	cout : OUT std_logic 
-	);
-	end component;
-	
-	component HALF_ADDER is
-	port
-	(
-	a    : IN std_logic ;
-	b    : IN std_logic ;
-	s    : OUT std_logic ;
-	cout : OUT std_logic 
-	);
-	end component;
-	
-	-- Will hold the carry signals among the whole architecture
-	signal carry_signal: std_logic_vector((Nbit_a - 1)*(Nbit_b - 1) - 1 downto 0);
-	signal last_carry_signal: std_logic_vector((Nbit_b - 1) downto 0);
-	
-	-- Will hold the sum result of the FA and HA among the whole architecture
-	signal sum_signal: std_logic_vector((Nbit_a - 1)*(Nbit_b - 2) - 1 downto 0);  
-	
-	-- will hold the precomputed values for the inputs a and b of the various Half Adder and Full Adder
-	signal a_multiplier: std_logic_vector(Nbit_a + Nbit_b - 2 downto 0);
-	signal b_multiplier: std_logic_vector((Nbit_a - 1)*(Nbit_b - 1) - 1 downto 0);
+		-- Building blocks of the Unsigned Parallel Multiplier
+		component FULL_ADDER is
+			...
+		end component;
+		
+		component HALF_ADDER is
+			...
+		end component;
+		
+		-- Will hold the carry signals among the whole architecture
+		signal carry_signal: std_logic_vector((Nbit_a - 1)*(Nbit_b - 1) - 1 downto 0);
+		signal last_carry_signal: std_logic_vector((Nbit_b - 1) downto 0);
+		
+		-- Will hold the sum result of the FA and HA among the whole architecture
+		signal sum_signal: std_logic_vector((Nbit_a - 1)*(Nbit_b - 2) - 1 downto 0);  
+		
+		-- will hold the precomputed values for the inputs a and b of the various Half Adder and Full Adder
+		signal a_multiplier: std_logic_vector(Nbit_a + Nbit_b - 2 downto 0);
+		signal b_multiplier: std_logic_vector((Nbit_a - 1)*(Nbit_b - 1) - 1 downto 0);
 	
 	begin
-	
-	-- First bit of the result
-	p(0) <= (a_p(0) and b_p(0));
-	
-	
-	-- Computation of the various inputs of each HA and FA
-	d_process: process(a_p, b_p)
-	begin
-	
-	for j in 1 to Nbit_b loop
-	a_multiplier(j - 1) <= (a_p(0) and b_p(Nbit_b - j));
-	end loop;
-	
-	for i in 2 to Nbit_a loop
-	a_multiplier(Nbit_b + i - 2) <= (a_p(i - 1) and b_p(Nbit_b - 1));
-	end loop;
-	
-	for i in 1 to Nbit_a-1 loop
-	for j in 1 to Nbit_b - 1 loop
-	b_multiplier((i-1)*(Nbit_b -1) + j - 1) <= (a_p(i) and b_p(Nbit_b - j - 1));
-	end loop;
-	end loop;
-	end process d_process;
-	
-	
-	-- Architecture will follow schema of the Parallel Multiplier
-	-- Row index i
-	GEN_a: for i in 1 to Nbit_a generate
-	-- Column index j
-	GEN_b: for j in 1 to Nbit_b - 1 generate 
-	FIRST_ROW: if i=1 generate
-	-- In the first Row only HA
-	LEFT: if j < Nbit_b -1 generate
-	ROW1_LEFT: HALF_ADDER
-	port map
-	(
-	a    => a_multiplier(j - 1), 
-	b    => b_multiplier(j - 1), 
-	s    => sum_signal(j - 1), 
-	cout => carry_signal(j - 1) 
-	);
-	end generate LEFT;
-	RIGHT: if j = Nbit_b - 1 generate
-	ROW1_RIGHT: HALF_ADDER
-	port map
-	(
-	a    => a_multiplier(j - 1), 
-	b    => b_multiplier(j - 1), 
-	s    => p(1), -- Result bit 
-	cout => carry_signal(j - 1) 
-	);
-	end generate RIGHT; 
-	end generate FIRST_ROW;
-	
-	
-	INTERNAL_ROW: if i > 1 and i < Nbit_a generate
-	-- Internal Rows only FA
-	LEFT: if j = 1 generate 
-	ROW_INT_LEFT: FULL_ADDER
-	port map
-	(
-	a => a_multiplier(Nbit_b + i - 2),  
-	b => b_multiplier((i-1)*(Nbit_b -1) + j - 1), 
-	cin => carry_signal((i-2)*(Nbit_b - 1) + (j-1)), 
-	s => sum_signal((i-1)*(Nbit_b - 2) + (j-1)), 
-	cout => carry_signal((i-1)*(Nbit_b - 1) + (j-1)) 
-	);
-	end generate LEFT;
-	CENTER: if j > 1 and j < Nbit_b - 1 generate
-	ROW_INT_CENTER: FULL_ADDER
-	port map
-	(
-	a => sum_signal((i-2)*(Nbit_b - 2) + (j-2)), 
-	b =>  b_multiplier((i-1)*(Nbit_b -1) + j - 1), 
-	cin => carry_signal((i-2)*(Nbit_b - 1) + (j-1)),
-	s => sum_signal((i-1)*(Nbit_b - 2) + (j-1)),
-	cout => carry_signal((i-1)*(Nbit_b - 1) + (j-1))
-	);
-	end generate CENTER;
-	RIGHT: if j = Nbit_b - 1 generate
-	ROW_INT_RIGHT: FULL_ADDER
-	port map
-	(
-	a => sum_signal((i-2)*(Nbit_b - 2) + (j-2)), 
-	b => b_multiplier((i-1)*(Nbit_b -1) + j - 1), 
-	cin => carry_signal((i-2)*(Nbit_b - 1) + (j-1)), 
-	s => p(i), -- Result bit
-	cout => carry_signal((i-1)*(Nbit_b - 1) + (j-1)) 
-	);
-	end generate RIGHT;
-	end generate INTERNAL_ROW;
-	
-	
-	LAST_ROW: if i = Nbit_a generate
-	-- Last row FA and an HA on the rightmost block
-	LEFT: if j = 1 generate 
-	ROW_INT_LEFT: FULL_ADDER
-	port map
-	(
-	a => a_multiplier(Nbit_b + i - 2), 
-	b => carry_signal((i-2)*(Nbit_b - 1) + (j-1)), 
-	cin => last_carry_signal(Nbit_b - j), 
-	s => p((Nbit_a) + (Nbit_b) - 1 - j), -- Result bit
-	cout => p((Nbit_a) + (Nbit_b) -1) -- Result bit
-	);
-	end generate LEFT;
-	CENTER: if j > 1 and j < Nbit_b - 1 generate
-	ROW_INT_CENTER: FULL_ADDER
-	port map
-	(
-	a => sum_signal((i-2)*(Nbit_b - 2) + (j-2)), 
-	b =>  carry_signal((i-2)*(Nbit_b - 1) + (j-1)), 
-	cin => last_carry_signal(Nbit_b - j), 
-	s =>  p((Nbit_a) + (Nbit_b) - 1 - j), -- Result bit
-	cout =>last_carry_signal(Nbit_b - j + 1) 
-	);
-	end generate CENTER;
-	RIGHT: if j = Nbit_b - 1 generate
-	ROW_INT_RIGHT: HALF_ADDER
-	port map
-	(
-	a => sum_signal((i-2)*(Nbit_b - 2) + (j-2)),
-	b => carry_signal((i-2)*(Nbit_b - 1) + (j-1)), 
-	s => p((Nbit_a) + (Nbit_b) -1 - j), -- Result bit
-	cout =>last_carry_signal(Nbit_b - j + 1)
-	);
-	end generate RIGHT;
-	end generate LAST_ROW;
-	end generate GEN_b;
-	end generate GEN_a;
+		
+		-- First bit of the result
+		p(0) <= (a_p(0) and b_p(0));
+		
+		
+		-- Computation of the various inputs of each HA and FA
+		d_process: process(a_p, b_p)
+		begin
+		
+		for j in 1 to Nbit_b loop
+		a_multiplier(j - 1) <= (a_p(0) and b_p(Nbit_b - j));
+		end loop;
+		
+		...
+		end process d_process;
+		
+		
+		-- Architecture will follow schema of the Parallel Multiplier
+		-- Row index i
+		GEN_a: for i in 1 to Nbit_a generate
+			-- Column index j
+			GEN_b: for j in 1 to Nbit_b - 1 generate 
+				FIRST_ROW: if i=1 generate
+				-- In the first Row only HA
+				LEFT: if j < Nbit_b -1 generate
+				ROW1_LEFT: HALF_ADDER
+				port map
+				(
+				a    => a_multiplier(j - 1), 
+				b    => b_multiplier(j - 1), 
+				s    => sum_signal(j - 1), 
+				cout => carry_signal(j - 1) 
+				);
+				end generate LEFT;
+				RIGHT: if j = Nbit_b - 1 generate
+				ROW1_RIGHT: HALF_ADDER
+				port map
+				(
+				a    => a_multiplier(j - 1), 
+				b    => b_multiplier(j - 1), 
+				s    => p(1), -- Result bit 
+				cout => carry_signal(j - 1) 
+				);
+				end generate RIGHT; 
+				end generate FIRST_ROW;
+				
+				
+				INTERNAL_ROW: if i > 1 and i < Nbit_a generate
+					...
+				end generate INTERNAL_ROW;
+				
+				
+				LAST_ROW: if i = Nbit_a generate
+					...
+				end generate LAST_ROW;
+			end generate GEN_b;
+		end generate GEN_a;
 	end architecture rtl; 
 \end{lstlisting}
 
 \subsection{Tree Adder}
+This module will take up the ten multiplication results and the bias and will sum up every term by making the computation shown at the equation (1). Even in this case will not be shown the architectural code due to the fact that consist only in linking some submodules in the proper way in order to replicate the architecture shown in Figure (9).
 \begin{lstlisting}[language=VHDL]
-library IEEE;
-use IEEE.std_logic_1164.all;
-
 entity Tree_Adder is
-port(
--- Inputs: result of the multiplication of xi*wi
-in_1: in std_logic_vector(16 downto 0);
-in_2: in std_logic_vector(16 downto 0);
-in_3: in std_logic_vector(16 downto 0);
-in_4: in std_logic_vector(16 downto 0);
-in_5: in std_logic_vector(16 downto 0);
-in_6: in std_logic_vector(16 downto 0);
-in_7: in std_logic_vector(16 downto 0);
-in_8: in std_logic_vector(16 downto 0);
-in_9: in std_logic_vector(16 downto 0);
-in_10: in std_logic_vector(16 downto 0);
-
--- Bias input
-b: in std_logic_vector(8 downto 0);
-clk: in std_logic;
-rst: in std_logic;
-
--- Output
-z: out std_logic_vector(20 downto 0)
-);
+	port(
+		-- Inputs: result of the multiplication of xi*wi
+		in_1: in std_logic_vector(16 downto 0);
+		in_2: in std_logic_vector(16 downto 0);
+		in_3: in std_logic_vector(16 downto 0);
+		in_4: in std_logic_vector(16 downto 0);
+		in_5: in std_logic_vector(16 downto 0);
+		in_6: in std_logic_vector(16 downto 0);
+		in_7: in std_logic_vector(16 downto 0);
+		in_8: in std_logic_vector(16 downto 0);
+		in_9: in std_logic_vector(16 downto 0);
+		in_10: in std_logic_vector(16 downto 0);
+		
+		-- Bias input
+		b: in std_logic_vector(8 downto 0);
+		clk: in std_logic;
+		rst: in std_logic;
+		
+		-- Output
+		z: out std_logic_vector(20 downto 0)
+	);
 end Tree_Adder;
 
 \end{lstlisting}
 
 \subsubsection{Ripple Carry Adder Pipelined}
+This module will be the main building block of the \textbf{Tree Adder} module. In order to reduce the logic chain some registers were added by exploiting the \textbf{DFF} module as seen in the Lab lectures.
 \begin{lstlisting}[language=VHDL]
-library IEEE;
-use IEEE.std_logic_1164.all;
-
--- Realize a Ripple Carry Adder in a structural way
-
 entity Ripple_Carry_Adder_Pipelined is
 generic (Nbit: positive);
-port(
--- Inputs
-a_r: in std_logic_vector(Nbit-2 downto 0);
-b_r: in std_logic_vector(Nbit-2 downto 0);
-cin_r: in std_logic;
-cout_r: out std_logic;
-
--- Will store the result of a_r+b_r
-s_r: out std_logic_vector(Nbit-1 downto 0);
-clk: in std_logic;
-rst: in std_logic
-);
+	port(
+		-- Inputs
+		a_r: in std_logic_vector(Nbit-2 downto 0);
+		b_r: in std_logic_vector(Nbit-2 downto 0);
+		cin_r: in std_logic;
+		cout_r: out std_logic;
+		
+		-- Will store the result of a_r+b_r
+		s_r: out std_logic_vector(Nbit-1 downto 0);
+		clk: in std_logic;
+		rst: in std_logic
+	);
 end Ripple_Carry_Adder_Pipelined;
 
 architecture rtl of Ripple_Carry_Adder_Pipelined is 
--- Building blocks of the Ripple Carry Adder Pipelined 
-component FULL_ADDER
-port(
-a: in std_logic;
-b: in std_logic;
-cin: in std_logic;
-s: out std_logic;
-cout: out std_logic
-);
-end component FULL_ADDER;
-
--- Need of a register to obtain the pipelined version
-component DFF
-port(
-d_dff      : in  std_logic;
-clk_dff    : in  std_logic;
-resetn_dff : in  std_logic;
-q_dff      : out std_logic
-);
-end component DFF;
-
-signal carry_signal: std_logic_vector(Nbit-1 downto 1);
-signal dff_signal: std_logic_vector(Nbit-1 downto 0) := (others => '0');
+	-- Building blocks of the Ripple Carry Adder Pipelined 
+	component FULL_ADDER
+		...
+	end component FULL_ADDER;
+	
+	-- Need of a register to obtain the pipelined version
+	component DFF
+	...
+	component DFF;
+	
+	-- Will propagate the carry signal among the whole architecture  
+	signal carry_signal: std_logic_vector(Nbit-1 downto 1);
+	
+	-- Will store the outputs signal of the registers
+	signal dff_signal: std_logic_vector(Nbit-1 downto 0) := (others => '0');
 
 begin
--- Implemented in a structured way in a similar fashion as seen in the Lab lessions
-GEN: for i in 1 to Nbit generate
-FIRST: if i=1 generate
--- First FA
-FFI: FULL_ADDER port map (a_r(0), b_r(0), cin_r, s_r(0), carry_signal(1));
-end generate FIRST;
-INTERNAL: if i > 1 and i < Nbit generate
--- Need of Register detection
-PIPE: if (i mod 3 = 0) generate
-DFF_I: DFF
-port map(
-d_dff      => carry_signal(i-1),
-clk_dff    => clk,
-resetn_dff => rst,
-q_dff      => dff_signal(i-1)
-);
-FFI: FULL_ADDER port map (a_r(i-1), b_r(i-1), dff_signal(i-1), s_r(i-1), carry_signal(i));
-end generate PIPE;
--- No need of a register
-NOT_PIPE: if (i mod 3 /= 0) generate
-FFI: FULL_ADDER port map (a_r(i-1), b_r(i-1), carry_signal(i-1), s_r(i-1), carry_signal(i));
-end generate NOT_PIPE;           
-end generate INTERNAL;
-
--- Implicit extension (the inputs have Nbit-2 bits, the output has Nbit-1 bits and there
--- are Nbit-1 FA so the last bit is replicated in order to make the extension in the 
--- correct way in C2 representation)
-
-LAST: if i=Nbit generate
-FFI: FULL_ADDER port map (a_r(Nbit-2), b_r(Nbit-2), carry_signal(Nbit-1), s_r(Nbit-1), cout_r);
-end generate LAST;
-end generate GEN;
+	-- Implemented in a structured way in a similar fashion as seen in the Lab lessions
+	GEN: for i in 1 to Nbit generate
+		FIRST: if i=1 generate
+		-- First FA
+			FFI: FULL_ADDER port map (a_r(0), b_r(0), cin_r, s_r(0), carry_signal(1));
+		end generate FIRST;
+		INTERNAL: if i > 1 and i < Nbit generate
+			-- Need of Register detection
+			PIPE: if (i mod 3 = 0) generate
+				DFF_I: DFF
+					port map(
+					d_dff      => carry_signal(i-1),
+					clk_dff    => clk,
+					resetn_dff => rst,
+					q_dff      => dff_signal(i-1)
+				);
+				FFI: FULL_ADDER port map (a_r(i-1), b_r(i-1), dff_signal(i-1), s_r(i-1), carry_signal(i));
+			end generate PIPE;
+			
+			-- No need of a register
+			NOT_PIPE: if (i mod 3 /= 0) generate
+				FFI: FULL_ADDER port map (a_r(i-1), b_r(i-1), carry_signal(i-1), s_r(i-1), carry_signal(i));
+			end generate NOT_PIPE;           
+		end generate INTERNAL;
+		
+		-- Implicit extension (the inputs have Nbit-2 bits, the output has Nbit-1 bits and there
+		-- are Nbit-1 FA so the last bit is replicated in order to make the extension in the 
+		-- correct way in C2 representation)
+		
+		LAST: if i=Nbit generate
+		FFI: FULL_ADDER port map (a_r(Nbit-2), b_r(Nbit-2), carry_signal(Nbit-1), s_r(Nbit-1), cout_r);
+		end generate LAST;
+	end generate GEN;
 end rtl;
 
 \end{lstlisting}
 
 \subsection{LUT}
+This module will store every possible output of the sigmoid function in the input range of $[-11; +11]$ with 12 bits of precision. The input will be treated as an address signal to obtain the correct output value in the same fashion as shown in the Laboratory lectures.
 \begin{lstlisting}[language=VHDL]
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
-
 entity sigmoid_lut_2048 is
-port (
-address : in  std_logic_vector(10 downto 0);
-dds_out : out std_logic_vector(15 downto 0) 
-);
+	port (
+		address : in  std_logic_vector(10 downto 0);
+		dds_out : out std_logic_vector(15 downto 0) 
+	);
 end sigmoid_lut_2048;
 
 
--- Output between [-11; +11], rapresented with fixed point
--- Need for 1 bit for integer, last 15 bit for float rapresentation
--- Reach the LSB method
--- 
+-- Output between [-11; +11], rapresented with fixed point 
+-- [Reach the LSB method]
 -- LSB(in) = (11)/(2^11 - 1) = 0.00537371763556424035173424523693
 -- LSB(out) = (1)/(2^15 - 1) = 3.0518509475997192297128208258309e-5
 -- inputs -> [-11, +11] 
 -- outputs -> [0, 1]
 -- Q(f(x)) = round(f(x)/LSB(out))*LSB(out)
--- 
 --
 -- What to store in the lut? round(f(x)/LSB(out)) for x in [0; 2047]*LSB(in)
 
 architecture rtl of sigmoid_lut_2048 is
-type LUT_t is array (natural range 0 to 2047) of integer;
-constant LUT: LUT_t := (
-0 => 16384,
-1 => 16428,
-...
-2046 => 32766,
-2047 => 32766
-);
+	type LUT_t is array (natural range 0 to 2047) of integer;
+	constant LUT: LUT_t := (
+		0 => 16384,
+		1 => 16428,
+		...
+		2046 => 32766,
+		2047 => 32766
+	);
 
 begin
-dds_out <= std_logic_vector(TO_SIGNED(LUT(TO_INTEGER(unsigned(address))),16));
+	dds_out <= std_logic_vector(TO_SIGNED(LUT(TO_INTEGER(unsigned(address))),16));
 end rtl;	
 \end{lstlisting}
 
 \subsubsection{Lut generation code}
+The whole Lut was not compiled "by hand" obviously. The look-up table outputs were generated through the following python script by exploiting the computation concerning the LSB with 12 bits and 16 bits resolution made before.
 \begin{lstlisting}[language=Python]
-	"""
-	LSB(out) = (1)/(2^15 - 1) = 3.0518509475997192297128208258309e-5
-	LSB(in) = (11)/(2^11 - 1) = 0.00537371763556424035173424523693
-	
-	What to store in the lut? round(f(x)/LSB(out)) for x in [0; 2047]*LSB(in)
-	"""
-	
 	import math
 	
 	#Calculate lsb of x (16 bits) and f(x) (12 bits)
 	lsb_out = (1)/(2**15 - 1)
 	lsb_in = (11)/(2**11 - 1)
 	result = ""
-	
 	
 	for x in range(0, 2048):
 		f_x = (1)/(1 + math.exp(-(x*lsb_in)))

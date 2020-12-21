@@ -11,6 +11,8 @@ entity Parallel_Multiplier is
     port(
         a_p_signed: in std_logic_vector(Nbit_a - 1 downto 0);
         b_p_signed: in std_logic_vector(Nbit_b - 1 downto 0);
+        
+        -- The product will need Nbit_a + Nbit_b bits
         p_signed: out std_logic_vector(Nbit_a + Nbit_b - 1 downto 0)
     );
 end entity Parallel_Multiplier;
