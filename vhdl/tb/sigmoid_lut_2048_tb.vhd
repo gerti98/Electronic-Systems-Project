@@ -17,7 +17,7 @@ architecture bhv of sigmoid_lut_2048_tb is -- Testbench architecture declaration
     -- Testbench signals
     -----------------------------------------------------------------------------------
     signal dds_out_tb       : std_logic_vector(15 downto 0); 
-    signal address_tb       : std_logic_vector(11 downto 0);
+    signal address_tb       : std_logic_vector(10 downto 0);
     
     signal clk_tb : std_logic := '0'; -- clock signal, intialized to '0' 
     signal rst_tb  : std_logic := '0'; -- reset signal  
@@ -26,7 +26,7 @@ architecture bhv of sigmoid_lut_2048_tb is -- Testbench architecture declaration
     
     component sigmoid_lut_2048
         port(
-            address : in  std_logic_vector(11 downto 0);
+            address : in  std_logic_vector(10 downto 0);
             dds_out : out std_logic_vector(15 downto 0)
         );
     end component sigmoid_lut_2048;

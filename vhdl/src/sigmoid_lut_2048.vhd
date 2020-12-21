@@ -4,7 +4,7 @@ use IEEE.numeric_std.all;
 
 entity sigmoid_lut_2048 is
   port (
-    address : in  std_logic_vector(11 downto 0);
+    address : in  std_logic_vector(10 downto 0);
     dds_out : out std_logic_vector(15 downto 0) 
   );
 end sigmoid_lut_2048;
