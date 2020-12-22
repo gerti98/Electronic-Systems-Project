@@ -79,7 +79,7 @@ begin
             );
      
       
-        d_process: process(clk_tb, rst_tb) -
+        d_process: process(clk_tb, rst_tb) 
         variable t : integer := 0;
         
         -- Variables that will be used to handle the incrementation of the inputs with a different velocity

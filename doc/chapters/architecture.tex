@@ -1,6 +1,6 @@
 \section{Architecture}
 
-In this chapter will be discussed deeply the architecture of the three main parts of the perceptron. The general structure could be summarized by the following schema:
+In this chapter will be discussed deeply the architecture of the three main parts of the \textbf{Perceptron}. The general structure could be summarized by the following schema:
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=12cm]{img/architecture_general_schema.pdf}
@@ -15,8 +15,8 @@ In the following image is presented the general schema of the Parallel Multiplie
 	\includegraphics[width=\textwidth]{img/architecture_general_parallel_multiplier.pdf}
 	\caption{Parallel Multiplier Architecture}
 \end{figure}
-Notice that the sign of the result will be computed by a simple XOR operation between the inputs signs. 
-The Unsigned Parallel Multiplier architecture is the following:
+Notice that the \textbf{sign} of the result will be computed by a simple \textit{XOR} operation between the inputs signs. 
+The \textbf{Unsigned Parallel Multiplier} architecture is the following:
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=13cm]{img/architecture_parallel_multiplier.pdf}
@@ -35,20 +35,25 @@ In order to compute the equation (1.1) different sums need to be computed. The b
  	\makebox[\textwidth][c]{\includegraphics[width=1.5\textwidth]{img/architecture_full_adder_with_pipeline.pdf}}%
  	\caption{Parallel Adder Architecture}
  \end{figure}
-To implement the whole sum of 11 terms, in order to decrease the number of cycles needed to compute the whole sum and to reduce the number of bits needed, a tree approach has been chosen. The schema of the tree parallel adder is the following:
+In order to obtain an output, after an input drive, there is a need to wait $\floor*{\frac{N}{N_{pipeline}}}$ clock cycles, where $N$ represent the number of bits of $a$ or $b$ and $N_{pipeline}$ represent the maximum number of consecutive FA without a register in between.\\
+To implement the whole sum of 11 terms, \textbf{in order to decrease the number of cycles needed} to compute the whole sum and to reduce the number of bits needed, a tree approach has been chosen. The schema of the tree parallel adder is the following:
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/architecture_adder_tree.pdf}
 	\caption{Parallel Multiplier Architecture}
 \end{figure}
 
-Some register has been put in between the sum to limit the critical path impact on the performances and clock period limit.
+\textbf{Note some extension or left shifts (i.e. for b) were not represented.}\\
+Some register has been put in between the sum to limit the critical path impact on the performances and clock period limit. 
+To obtain a good output after an input drive there is a need to sum to 3 (the maximum number of consecutive register in the previous architecture) each Ripple Carry Adder contribution in terms of number of clock as seen before.
 
 \subsection{Activation Function Circuit Architecture}
-At the end of the computation of the latter phase the output is composed by $21$ bits. The computation of the sigmoid function will be done through a \textbf{Look-Up-Table}, which will need \textbf{$2^{21} = $2097152 entries} of different outputs with $16$ bits. In order to reduce the size of the Look-Up-Table a truncation is needed: from $21$ bits to $12$ bits. In this case the Look-Up Table will be composed by \textbf{$2^{12} = $4096 entries}, but, by exploiting the \textbf{odd symmetry} of the sigmoid, only \textbf{$4096/2 = $ 2048 entries} are needed.
+At the end of the computation of the latter phase the output is composed by $21$ bits. The computation of the sigmoid function will be done through a \textbf{Look-Up-Table}, which will need \textbf{$2^{21} = $ 2097152 entries} of different outputs with $16$ bits. In order to reduce the size of the Look-Up-Table a truncation is needed: from $21$ bits to $12$ bits. In this case the Look-Up Table will be composed by \textbf{$2^{12} = $ 4096 entries}, but, by exploiting the \textbf{odd symmetry} of the sigmoid, only \textbf{$4096/2 = $ 2048 entries} are needed.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{img/architecture_lut_optimized.pdf}
 	\caption{Look-Up Table Architecture}
 \end{figure}
+
+All things considered, by performing the calculation showed before, there is a need of 26 \textbf{clock cycles} to obtain a correct output after driving an input.
  

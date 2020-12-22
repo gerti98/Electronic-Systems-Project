@@ -93,16 +93,16 @@ architecture rtl of Perceptron is
     end component sigmoid_lut_2048;
     
     -- Intermediate signals, inputs of the registers
-    signal xw_1 : std_logic_vector(16 downto 0);
-    signal xw_2 : std_logic_vector(16 downto 0);
-    signal xw_3 : std_logic_vector(16 downto 0);
-    signal xw_4 : std_logic_vector(16 downto 0);
-    signal xw_5 : std_logic_vector(16 downto 0);
-    signal xw_6 : std_logic_vector(16 downto 0);
-    signal xw_7 : std_logic_vector(16 downto 0);
-    signal xw_8 : std_logic_vector(16 downto 0);
-    signal xw_9 : std_logic_vector(16 downto 0);
-    signal xw_10 : std_logic_vector(16 downto 0);
+    signal xw_1 : std_logic_vector(17 downto 0);
+    signal xw_2 : std_logic_vector(17 downto 0);
+    signal xw_3 : std_logic_vector(17 downto 0);
+    signal xw_4 : std_logic_vector(17 downto 0);
+    signal xw_5 : std_logic_vector(17 downto 0);
+    signal xw_6 : std_logic_vector(17 downto 0);
+    signal xw_7 : std_logic_vector(17 downto 0);
+    signal xw_8 : std_logic_vector(17 downto 0);
+    signal xw_9 : std_logic_vector(17 downto 0);
+    signal xw_10 : std_logic_vector(17 downto 0);
     
     -- Intermediate signals, outputs of the registers
     signal xw_1_in : std_logic_vector(16 downto 0);
@@ -122,8 +122,12 @@ architecture rtl of Perceptron is
     -- result of the tree adder, output of a register   
     signal z_in : std_logic_vector(20 downto 0);
     
+    -- for debugging purposes 
+    signal z_quantized: std_logic_vector(11 downto 0);
+        
     -- input of the lut, computed from z_in   
     signal z_in_lut: std_logic_vector(20 downto 0);
+
 
     -- output of the lut, needs sign check
     signal f_z_todo : std_logic_vector(15 downto 0);
@@ -134,11 +138,12 @@ begin
     -- structured approach, but many std_logic_vector with 8 and 9 bits
     MUL_1: Parallel_Multiplier
         generic map(
-            Nbit_a => 8,
+            Nbit_a => 9,
             Nbit_b => 9
         )
         port map(
-            a_p_signed => x_1,
+            a_p_signed(8 downto 1) => x_1,
+            a_p_signed(0) => '0',
             b_p_signed => w_1,
             p_signed   => xw_1
         );
@@ -147,7 +152,7 @@ begin
             Nbit => 17
         )
         port map(
-            d_dff      => xw_1,
+            d_dff      => xw_1(17 downto 1),
             clk_dff    => clk,
             resetn_dff => rst,
             q_dff      => xw_1_in
@@ -155,11 +160,12 @@ begin
         
     MUL_2: Parallel_Multiplier
         generic map(
-            Nbit_a => 8,
+            Nbit_a => 9,
             Nbit_b => 9
         )
         port map(
-            a_p_signed => x_2,
+            a_p_signed(8 downto 1) => x_2,
+            a_p_signed(0) => '0',
             b_p_signed => w_2,
             p_signed   => xw_2
         );
@@ -168,18 +174,19 @@ begin
             Nbit => 17
         )
         port map(
-            d_dff      => xw_2,
+            d_dff      => xw_2(17 downto 1),
             clk_dff    => clk,
             resetn_dff => rst,
             q_dff      => xw_2_in
         );
     MUL_3: Parallel_Multiplier
         generic map(
-            Nbit_a => 8,
+            Nbit_a => 9,
             Nbit_b => 9
         )
         port map(
-            a_p_signed => x_3,
+            a_p_signed(8 downto 1) => x_3,
+            a_p_signed(0) => '0',
             b_p_signed => w_3,
             p_signed   => xw_3
         );
@@ -188,18 +195,19 @@ begin
             Nbit => 17
         )
         port map(
-            d_dff      => xw_3,
+            d_dff      => xw_3(17 downto 1),
             clk_dff    => clk,
             resetn_dff => rst,
             q_dff      => xw_3_in
         );
     MUL_4: Parallel_Multiplier
         generic map(
-            Nbit_a => 8,
+            Nbit_a => 9,
             Nbit_b => 9
         )
         port map(
-            a_p_signed => x_4,
+            a_p_signed(8 downto 1) => x_4,
+            a_p_signed(0) => '0',
             b_p_signed => w_4,
             p_signed   => xw_4
         );
@@ -208,18 +216,19 @@ begin
             Nbit => 17
         )
         port map(
-            d_dff      => xw_4,
+            d_dff      => xw_4(17 downto 1),
             clk_dff    => clk,
             resetn_dff => rst,
             q_dff      => xw_4_in
         );
    MUL_5: Parallel_Multiplier
         generic map(
-            Nbit_a => 8,
+            Nbit_a => 9,
             Nbit_b => 9
         )
         port map(
-            a_p_signed => x_5,
+            a_p_signed(8 downto 1) => x_5,
+            a_p_signed(0) => '0',
             b_p_signed => w_5,
             p_signed   => xw_5
         );
@@ -228,18 +237,19 @@ begin
             Nbit => 17
         )
         port map(
-            d_dff      => xw_5,
+            d_dff      => xw_5(17 downto 1),
             clk_dff    => clk,
             resetn_dff => rst,
             q_dff      => xw_5_in
         );
     MUL_6: Parallel_Multiplier
         generic map(
-            Nbit_a => 8,
+            Nbit_a => 9,
             Nbit_b => 9
         )
         port map(
-            a_p_signed => x_6,
+            a_p_signed(8 downto 1) => x_6,
+            a_p_signed(0) => '0',
             b_p_signed => w_6,
             p_signed   => xw_6
         );
@@ -248,18 +258,19 @@ begin
             Nbit => 17
         )
         port map(
-            d_dff      => xw_6,
+            d_dff      => xw_6(17 downto 1),
             clk_dff    => clk,
             resetn_dff => rst,
             q_dff      => xw_6_in
         );
     MUL_7: Parallel_Multiplier
         generic map(
-            Nbit_a => 8,
+            Nbit_a => 9,
             Nbit_b => 9
         )
         port map(
-            a_p_signed => x_7,
+            a_p_signed(8 downto 1) => x_7,
+            a_p_signed(0) => '0',
             b_p_signed => w_7,
             p_signed   => xw_7
         );
@@ -268,18 +279,19 @@ begin
             Nbit => 17
         )
         port map(
-            d_dff      => xw_7,
+            d_dff      => xw_7(17 downto 1),
             clk_dff    => clk,
             resetn_dff => rst,
             q_dff      => xw_7_in
         );
     MUL_8: Parallel_Multiplier
         generic map(
-            Nbit_a => 8,
+            Nbit_a => 9,
             Nbit_b => 9
         )
         port map(
-            a_p_signed => x_8,
+            a_p_signed(8 downto 1) => x_8,
+            a_p_signed(0) => '0',
             b_p_signed => w_8,
             p_signed   => xw_8
         );
@@ -288,18 +300,19 @@ begin
             Nbit => 17
         )
         port map(
-            d_dff      => xw_8,
+            d_dff      => xw_8(17 downto 1),
             clk_dff    => clk,
             resetn_dff => rst,
             q_dff      => xw_8_in
         );
     MUL_9: Parallel_Multiplier
         generic map(
-            Nbit_a => 8,
+            Nbit_a => 9,
             Nbit_b => 9
         )
         port map(
-            a_p_signed => x_9,
+            a_p_signed(8 downto 1) => x_9,
+            a_p_signed(0) => '0',
             b_p_signed => w_9,
             p_signed   => xw_9
         );
@@ -308,18 +321,19 @@ begin
             Nbit => 17
         )
         port map(
-            d_dff      => xw_9,
+            d_dff      => xw_9(17 downto 1),
             clk_dff    => clk,
             resetn_dff => rst,
             q_dff      => xw_9_in
         );
     MUL_10: Parallel_Multiplier
         generic map(
-            Nbit_a => 8,
+            Nbit_a => 9,
             Nbit_b => 9
         )
         port map(
-            a_p_signed => x_10,
+            a_p_signed(8 downto 1) => x_10,
+            a_p_signed(0) => '0',
             b_p_signed => w_10,
             p_signed   => xw_10
         );
@@ -328,7 +342,7 @@ begin
             Nbit => 17
         )
         port map(
-            d_dff      => xw_10,
+            d_dff      => xw_10(17 downto 1),
             clk_dff    => clk,
             resetn_dff => rst,
             q_dff      => xw_10_in
@@ -371,7 +385,9 @@ begin
             dds_out => f_z_todo
         );
     
-    d_process: process(clk, rst)
+    z_quantized <= z_in(20 downto 9);
+    
+    d_process: process(z_in, f_z_todo)
     begin
         -- If z, the candidate input of the sigmoid function, is negative,
 		-- then is passed his complement.

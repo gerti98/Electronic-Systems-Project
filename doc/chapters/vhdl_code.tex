@@ -353,13 +353,13 @@ end rtl;
 \end{lstlisting}
 
 \subsection{LUT}
-This module will store every possible output of the sigmoid function in the input range of $[-11; +11]$ with 12 bits of precision and output range of $[0; 1]$ with 16 bits of precision. In order to do so a quantization is needed: is unthinkable to define precisely a rational number with a finite number of bits. To determine the quantized quantity of the input and the output there is a need to calculate the weight of the LSB in that range. Through the \textbf{Reach the LSB} method seen during the Lab lectures, the LSB, with N bits of precision, can be calculated as:
+This module will store every possible output of the sigmoid function in the unsigned input range of $[0; +31]$ with 12 bits of precision, (even if the working range is $[-11; +11]$, but with the addition of some logic to make the lut optimization an unsigned representation was used), and output range of $[0; 1]$ with 16 bits of precision. In order to do so a quantization is needed: is unthinkable to define precisely a rational number with a finite number of bits. To determine the quantized quantity of the input and the output there is a need to calculate the weight of the LSB in that range. Through the \textbf{Reach the LSB} method seen during the Lab lectures, the LSB, with N bits of precision, can be calculated as:
 \begin{equation}
 LSB = \frac{\max{x}}{2^{N-1}-1}\ \ or\ \ \frac{|\min{x}|}{2^{N-1}}
 \end{equation}
 So, in out case:
 \begin{equation}
-LSB(in) = \frac{11}{2^{11} - 1} = 0.005373717
+LSB(in) = \frac{31}{2^{11} - 1} = 0.015144113
 \end{equation}
 \begin{equation}
 LSB(out) = \frac{1}{2^{15} -1} = 3.051850947e-5
@@ -396,7 +396,7 @@ The whole Lut was not compiled "by hand" obviously. The look-up table outputs we
 	
 	#Calculate lsb of x (16 bits) and f(x) (12 bits)
 	lsb_out = (1)/(2**15 - 1)
-	lsb_in = (11)/(2**11 - 1)
+	lsb_in = (31)/(2**11 - 1)
 	result = ""
 	
 	for x in range(0, 2048):
