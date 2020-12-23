@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.24)  22 DEC 2020 18:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.24)  23 DEC 2020 17:05
 entering extended mode
 **./perceptronReport.tex
 (perceptronReport.tex
@@ -560,7 +560,8 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 ] [14] [15] [16] [17] [18] [19] [20] [21]
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
-)) [22]
+)
+[22]) [23]
 \openout2 = `chapters/test_plan.aux'.
 
  (chapters/test_plan.tex
@@ -568,29 +569,29 @@ File: img/sigmoid.png Graphic file (type png)
 <use img/sigmoid.png>
 Package pdftex.def Info: img/sigmoid.png  used on input line 19.
 (pdftex.def)             Requested size: 227.62204pt x 177.5594pt.
- [23
+ [24
 
 
 
 ]
-<img/est_test_1.png, id=194, 614.79688pt x 58.2175pt>
+<img/est_test_1.png, id=198, 614.79688pt x 58.2175pt>
 File: img/est_test_1.png Graphic file (type png)
 <use img/est_test_1.png>
 Package pdftex.def Info: img/est_test_1.png  used on input line 25.
 (pdftex.def)             Requested size: 390.0pt x 36.93126pt.
-<img/est_test_2.png, id=196, 614.295pt x 60.225pt>
+<img/est_test_2.png, id=200, 614.295pt x 60.225pt>
 File: img/est_test_2.png Graphic file (type png)
 <use img/est_test_2.png>
 Package pdftex.def Info: img/est_test_2.png  used on input line 36.
 (pdftex.def)             Requested size: 390.0pt x 38.23601pt.
- [24 <./img/est_test_1.png> <./img/est_test_2.png>]
-<img/est_test_3.png, id=203, 617.80812pt x 64.74188pt>
+ [25 <./img/est_test_1.png> <./img/est_test_2.png>]
+<img/est_test_3.png, id=206, 617.80812pt x 64.74188pt>
 File: img/est_test_3.png Graphic file (type png)
 <use img/est_test_3.png>
 Package pdftex.def Info: img/est_test_3.png  used on input line 47.
 (pdftex.def)             Requested size: 390.0pt x 40.87057pt.
- [25 <./img/est_test_3.png>] [26] [27]
-<img/aimed_test.png, id=214, 888.31876pt x 118.94438pt>
+ [26 <./img/est_test_3.png>] [27] [28]
+<img/aimed_test.png, id=217, 888.31876pt x 118.94438pt>
 File: img/aimed_test.png Graphic file (type png)
 <use img/aimed_test.png>
 Package pdftex.def Info: img/aimed_test.png  used on input line 194.
@@ -620,18 +621,52 @@ Overfull \hbox (42.05125pt too wide) in paragraph at lines 202--221
  [] 
  []
 
-[28 <./img/aimed_test.png>]) [29]
+[29 <./img/aimed_test.png>]) [30]
 \openout2 = `chapters/xilinx_report.aux'.
 
- (chapters/xilinx_report.tex) [30
+ (chapters/xilinx_report.tex
+<img/vivado/timing.png, id=226, 622.325pt x 120.45pt>
+File: img/vivado/timing.png Graphic file (type png)
+<use img/vivado/timing.png>
+Package pdftex.def Info: img/vivado/timing.png  used on input line 10.
+(pdftex.def)             Requested size: 390.0pt x 75.48506pt.
+<img/vivado/critical_path.png, id=227, 715.17188pt x 200.75pt>
+File: img/vivado/critical_path.png Graphic file (type png)
+<use img/vivado/critical_path.png>
+Package pdftex.def Info: img/vivado/critical_path.png  used on input line 20.
+(pdftex.def)             Requested size: 390.0pt x 109.4755pt.
+ [31
 
 
 
-]
+ <./img/vivado/timing.png>]
+<img/vivado/utilization.png, id=232, 311.66437pt x 155.58125pt>
+File: img/vivado/utilization.png Graphic file (type png)
+<use img/vivado/utilization.png>
+Package pdftex.def Info: img/vivado/utilization.png  used on input line 28.
+(pdftex.def)             Requested size: 234.00238pt x 116.81383pt.
+<img/vivado/power.png, id=233, 474.27188pt x 277.035pt>
+File: img/vivado/power.png Graphic file (type png)
+<use img/vivado/power.png>
+Package pdftex.def Info: img/vivado/power.png  used on input line 36.
+(pdftex.def)             Requested size: 312.00119pt x 182.25607pt.
+ [32 <./img/vivado/critical_path.png> <./img/vivado/utilization.png>]
+<img/vivado/warnings.png, id=239, 844.15375pt x 88.33pt>
+File: img/vivado/warnings.png Graphic file (type png)
+<use img/vivado/warnings.png>
+Package pdftex.def Info: img/vivado/warnings.png  used on input line 44.
+(pdftex.def)             Requested size: 390.0pt x 40.80884pt.
+
+Overfull \hbox (12.34221pt too wide) in paragraph at lines 50--51
+[]\OT1/cmr/bx/n/12 [Synth 8-3936] Found un-con-nected in-ter-nal reg-is-ter 'z$
+[]$in$[]$lut$[]$reg'
+ []
+
+[33 <./img/vivado/power.png> <./img/vivado/warnings.png>]) [34]
 \openout2 = `chapters/conclusion.aux'.
 
 
-(chapters/conclusion.tex) [31
+(chapters/conclusion.tex) [35
 
 
 
@@ -639,13 +674,13 @@ Overfull \hbox (42.05125pt too wide) in paragraph at lines 202--221
  (chapters/vhdl_code.aux) (chapters/test_plan.aux) (chapters/xilinx_report.aux)
  (chapters/conclusion.aux)) ) 
 Here is how much of TeX's memory you used:
- 7883 strings out of 480236
- 121551 string characters out of 2880557
- 917179 words of memory out of 3000000
- 24299 multiletter control sequences out of 15000+200000
- 542054 words of font info for 53 fonts, out of 3000000 for 9000
+ 7918 strings out of 480236
+ 122348 string characters out of 2880557
+ 913374 words of memory out of 3000000
+ 24326 multiletter control sequences out of 15000+200000
+ 542675 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,12n,77p,912b,1761s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 70i,12n,77p,912b,1806s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\gxhan\AppData\Local\MiKTeX\fonts/pk/ljf
 our/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/gxhan/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/gxhan/AppData/Local/Progr
@@ -663,9 +698,9 @@ MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gxhan/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/gxhan/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/gxh
 an/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on perceptronReport.pdf (32 pages, 646011 bytes).
+Output written on perceptronReport.pdf (36 pages, 746272 bytes).
 PDF statistics:
- 279 PDF objects out of 1000 (max. 8388607)
+ 301 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

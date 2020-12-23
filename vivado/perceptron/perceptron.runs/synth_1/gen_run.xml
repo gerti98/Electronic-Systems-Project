@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1608729000">
+  <File Type="PA-TCL" Name="Perceptron.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Perceptron_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Perceptron_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Perceptron.vds"/>
+  <File Type="RDS-UTIL" Name="Perceptron_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Perceptron_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Perceptron.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Perceptron_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Perceptron_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/DFF.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/HALF_ADDER.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_DFF.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_Multiplier.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Ripple_Carry_Adder_Pipelined.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Tree_Adder.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/sigmoid_lut_2048.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Perceptron"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/perceptron_zybo_const.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/perceptron_zybo_const.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

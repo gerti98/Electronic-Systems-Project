@@ -1,0 +1,661 @@
+
+*** Running vivado
+    with args -log Perceptron.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Perceptron.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source Perceptron.tcl -notrace
+Command: synth_design -top Perceptron -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 6820 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 361.785 ; gain = 100.453
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Perceptron' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:42]
+	Parameter Nbit_a bound to: 9 - type: integer 
+	Parameter Nbit_b bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'Parallel_Multiplier' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_Multiplier.vhd:6' bound to instance 'MUL_1' of component 'Parallel_Multiplier' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:139]
+INFO: [Synth 8-638] synthesizing module 'Parallel_Multiplier' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_Multiplier.vhd:21]
+	Parameter Nbit_a bound to: 9 - type: integer 
+	Parameter Nbit_b bound to: 9 - type: integer 
+	Parameter Nbit_a bound to: 9 - type: integer 
+	Parameter Nbit_b bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'Unsigned_Parallel_Multiplier' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:4' bound to instance 'unsigned_parallel_mul' of component 'Unsigned_Parallel_Multiplier' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_Multiplier.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'Unsigned_Parallel_Multiplier' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:19]
+	Parameter Nbit_a bound to: 9 - type: integer 
+	Parameter Nbit_b bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'HALF_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/HALF_ADDER.vhd:5' bound to instance 'ROW1_LEFT' of component 'HALF_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'HALF_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/HALF_ADDER.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'HALF_ADDER' (1#1) [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/HALF_ADDER.vhd:14]
+INFO: [Synth 8-3491] module 'HALF_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/HALF_ADDER.vhd:5' bound to instance 'ROW1_LEFT' of component 'HALF_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:87]
+INFO: [Synth 8-3491] module 'HALF_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/HALF_ADDER.vhd:5' bound to instance 'ROW1_LEFT' of component 'HALF_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:87]
+INFO: [Synth 8-3491] module 'HALF_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/HALF_ADDER.vhd:5' bound to instance 'ROW1_LEFT' of component 'HALF_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:87]
+INFO: [Synth 8-3491] module 'HALF_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/HALF_ADDER.vhd:5' bound to instance 'ROW1_LEFT' of component 'HALF_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:87]
+INFO: [Synth 8-3491] module 'HALF_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/HALF_ADDER.vhd:5' bound to instance 'ROW1_LEFT' of component 'HALF_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:87]
+INFO: [Synth 8-3491] module 'HALF_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/HALF_ADDER.vhd:5' bound to instance 'ROW1_LEFT' of component 'HALF_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:87]
+INFO: [Synth 8-3491] module 'HALF_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/HALF_ADDER.vhd:5' bound to instance 'ROW1_RIGHT' of component 'HALF_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:97]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_LEFT' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:112]
+INFO: [Synth 8-638] synthesizing module 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'FULL_ADDER' (2#1) [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:15]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_RIGHT' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:134]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_LEFT' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:112]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_RIGHT' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:134]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_LEFT' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:112]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_RIGHT' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:134]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_LEFT' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:112]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_RIGHT' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:134]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_LEFT' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:112]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_RIGHT' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:134]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_LEFT' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:112]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_RIGHT' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:134]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_LEFT' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:112]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:123]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_RIGHT' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:134]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_LEFT' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:150]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:161]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:161]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:161]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:161]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:161]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'ROW_INT_CENTER' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:161]
+INFO: [Synth 8-3491] module 'HALF_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/HALF_ADDER.vhd:5' bound to instance 'ROW_INT_RIGHT' of component 'HALF_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:172]
+INFO: [Synth 8-256] done synthesizing module 'Unsigned_Parallel_Multiplier' (3#1) [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Unsigned_Parallel_Multiplier.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'Parallel_Multiplier' (4#1) [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_Multiplier.vhd:21]
+	Parameter Nbit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'Parallel_DFF' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_DFF.vhd:4' bound to instance 'REG_1' of component 'Parallel_DFF' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:150]
+INFO: [Synth 8-638] synthesizing module 'Parallel_DFF' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_DFF.vhd:14]
+	Parameter Nbit bound to: 17 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Parallel_DFF' (5#1) [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_DFF.vhd:14]
+	Parameter Nbit_a bound to: 9 - type: integer 
+	Parameter Nbit_b bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'Parallel_Multiplier' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_Multiplier.vhd:6' bound to instance 'MUL_2' of component 'Parallel_Multiplier' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:161]
+	Parameter Nbit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'Parallel_DFF' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_DFF.vhd:4' bound to instance 'REG_2' of component 'Parallel_DFF' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:172]
+	Parameter Nbit_a bound to: 9 - type: integer 
+	Parameter Nbit_b bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'Parallel_Multiplier' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_Multiplier.vhd:6' bound to instance 'MUL_3' of component 'Parallel_Multiplier' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:182]
+	Parameter Nbit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'Parallel_DFF' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_DFF.vhd:4' bound to instance 'REG_3' of component 'Parallel_DFF' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:193]
+	Parameter Nbit_a bound to: 9 - type: integer 
+	Parameter Nbit_b bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'Parallel_Multiplier' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_Multiplier.vhd:6' bound to instance 'MUL_4' of component 'Parallel_Multiplier' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:203]
+	Parameter Nbit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'Parallel_DFF' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_DFF.vhd:4' bound to instance 'REG_4' of component 'Parallel_DFF' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:214]
+	Parameter Nbit_a bound to: 9 - type: integer 
+	Parameter Nbit_b bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'Parallel_Multiplier' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_Multiplier.vhd:6' bound to instance 'MUL_5' of component 'Parallel_Multiplier' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:224]
+	Parameter Nbit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'Parallel_DFF' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_DFF.vhd:4' bound to instance 'REG_5' of component 'Parallel_DFF' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:235]
+	Parameter Nbit_a bound to: 9 - type: integer 
+	Parameter Nbit_b bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'Parallel_Multiplier' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_Multiplier.vhd:6' bound to instance 'MUL_6' of component 'Parallel_Multiplier' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:245]
+	Parameter Nbit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'Parallel_DFF' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_DFF.vhd:4' bound to instance 'REG_6' of component 'Parallel_DFF' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:256]
+	Parameter Nbit_a bound to: 9 - type: integer 
+	Parameter Nbit_b bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'Parallel_Multiplier' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_Multiplier.vhd:6' bound to instance 'MUL_7' of component 'Parallel_Multiplier' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:266]
+	Parameter Nbit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'Parallel_DFF' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_DFF.vhd:4' bound to instance 'REG_7' of component 'Parallel_DFF' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:277]
+	Parameter Nbit_a bound to: 9 - type: integer 
+	Parameter Nbit_b bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'Parallel_Multiplier' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_Multiplier.vhd:6' bound to instance 'MUL_8' of component 'Parallel_Multiplier' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:287]
+	Parameter Nbit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'Parallel_DFF' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_DFF.vhd:4' bound to instance 'REG_8' of component 'Parallel_DFF' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:298]
+	Parameter Nbit_a bound to: 9 - type: integer 
+	Parameter Nbit_b bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'Parallel_Multiplier' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_Multiplier.vhd:6' bound to instance 'MUL_9' of component 'Parallel_Multiplier' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:308]
+	Parameter Nbit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'Parallel_DFF' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_DFF.vhd:4' bound to instance 'REG_9' of component 'Parallel_DFF' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:319]
+	Parameter Nbit_a bound to: 9 - type: integer 
+	Parameter Nbit_b bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'Parallel_Multiplier' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_Multiplier.vhd:6' bound to instance 'MUL_10' of component 'Parallel_Multiplier' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:329]
+	Parameter Nbit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'Parallel_DFF' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_DFF.vhd:4' bound to instance 'REG_10' of component 'Parallel_DFF' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:340]
+INFO: [Synth 8-3491] module 'Tree_Adder' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Tree_Adder.vhd:4' bound to instance 'TREE_ADD' of component 'Tree_Adder' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:352]
+INFO: [Synth 8-638] synthesizing module 'Tree_Adder' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Tree_Adder.vhd:29]
+	Parameter Nbit bound to: 18 - type: integer 
+INFO: [Synth 8-3491] module 'Ripple_Carry_Adder_Pipelined' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Ripple_Carry_Adder_Pipelined.vhd:4' bound to instance 'sum_1_1' of component 'Ripple_Carry_Adder_Pipelined' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Tree_Adder.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'Ripple_Carry_Adder_Pipelined' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Ripple_Carry_Adder_Pipelined.vhd:20]
+	Parameter Nbit bound to: 18 - type: integer 
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'FFI' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Ripple_Carry_Adder_Pipelined.vhd:53]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'FFI' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Ripple_Carry_Adder_Pipelined.vhd:69]
+INFO: [Synth 8-3491] module 'DFF' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/DFF.vhd:4' bound to instance 'DFF_I' of component 'DFF' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Ripple_Carry_Adder_Pipelined.vhd:58]
+INFO: [Synth 8-638] synthesizing module 'DFF' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/DFF.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'DFF' (6#1) [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/DFF.vhd:13]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'FFI' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Ripple_Carry_Adder_Pipelined.vhd:65]
+INFO: [Synth 8-3491] module 'FULL_ADDER' declared at 'C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/FULL_ADDER.vhd:5' bound to instance 'FFI' of component 'FULL_ADDER' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Ripple_Carry_Adder_Pipelined.vhd:69]
+INFO: [Common 17-14] Message 'Synth 8-3491' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-256] done synthesizing module 'Ripple_Carry_Adder_Pipelined' (7#1) [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Ripple_Carry_Adder_Pipelined.vhd:20]
+	Parameter Nbit bound to: 18 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Parallel_DFF__parameterized2' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_DFF.vhd:14]
+	Parameter Nbit bound to: 18 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Parallel_DFF__parameterized2' (7#1) [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_DFF.vhd:14]
+	Parameter Nbit bound to: 18 - type: integer 
+	Parameter Nbit bound to: 18 - type: integer 
+	Parameter Nbit bound to: 18 - type: integer 
+	Parameter Nbit bound to: 18 - type: integer 
+	Parameter Nbit bound to: 18 - type: integer 
+	Parameter Nbit bound to: 18 - type: integer 
+	Parameter Nbit bound to: 18 - type: integer 
+	Parameter Nbit bound to: 18 - type: integer 
+	Parameter Nbit bound to: 19 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Ripple_Carry_Adder_Pipelined__parameterized2' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Ripple_Carry_Adder_Pipelined.vhd:20]
+	Parameter Nbit bound to: 19 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Ripple_Carry_Adder_Pipelined__parameterized2' (7#1) [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Ripple_Carry_Adder_Pipelined.vhd:20]
+	Parameter Nbit bound to: 19 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Parallel_DFF__parameterized4' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_DFF.vhd:14]
+	Parameter Nbit bound to: 19 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Parallel_DFF__parameterized4' (7#1) [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_DFF.vhd:14]
+	Parameter Nbit bound to: 19 - type: integer 
+	Parameter Nbit bound to: 19 - type: integer 
+	Parameter Nbit bound to: 19 - type: integer 
+	Parameter Nbit bound to: 20 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Parallel_DFF__parameterized6' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_DFF.vhd:14]
+	Parameter Nbit bound to: 20 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Parallel_DFF__parameterized6' (7#1) [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_DFF.vhd:14]
+	Parameter Nbit bound to: 20 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Ripple_Carry_Adder_Pipelined__parameterized4' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Ripple_Carry_Adder_Pipelined.vhd:20]
+	Parameter Nbit bound to: 20 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Ripple_Carry_Adder_Pipelined__parameterized4' (7#1) [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Ripple_Carry_Adder_Pipelined.vhd:20]
+	Parameter Nbit bound to: 20 - type: integer 
+	Parameter Nbit bound to: 21 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Ripple_Carry_Adder_Pipelined__parameterized6' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Ripple_Carry_Adder_Pipelined.vhd:20]
+	Parameter Nbit bound to: 21 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Ripple_Carry_Adder_Pipelined__parameterized6' (7#1) [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Ripple_Carry_Adder_Pipelined.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'Tree_Adder' (8#1) [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Tree_Adder.vhd:29]
+	Parameter Nbit bound to: 21 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Parallel_DFF__parameterized8' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_DFF.vhd:14]
+	Parameter Nbit bound to: 21 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Parallel_DFF__parameterized8' (8#1) [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Parallel_DFF.vhd:14]
+INFO: [Synth 8-638] synthesizing module 'sigmoid_lut_2048' [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/sigmoid_lut_2048.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'sigmoid_lut_2048' (9#1) [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/sigmoid_lut_2048.vhd:26]
+WARNING: [Synth 8-3936] Found unconnected internal register 'z_in_lut_reg' and it is trimmed from '21' to '20' bits. [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:384]
+INFO: [Synth 8-256] done synthesizing module 'Perceptron' (10#1) [C:/Users/gxhan/Documents/Università/Esami_Correnti/Electronic Systems/project/vhdl/src/Perceptron.vhd:42]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 420.656 ; gain = 159.324
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 420.656 ; gain = 159.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 420.656 ; gain = 159.324
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/gxhan/perceptron/perceptron.srcs/constrs_1/new/perceptron_zybo_const.xdc]
+Finished Parsing XDC File [C:/Users/gxhan/perceptron/perceptron.srcs/constrs_1/new/perceptron_zybo_const.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 768.250 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 768.250 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 768.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 768.250 ; gain = 506.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 768.250 ; gain = 506.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 768.250 ; gain = 506.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 768.250 ; gain = 506.918
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input     18 Bit       Adders := 10    
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 20    
++---XORs : 
+	   2 Input      1 Bit         XORs := 100   
+	   3 Input      1 Bit         XORs := 818   
++---Registers : 
+	               21 Bit    Registers := 1     
+	               20 Bit    Registers := 2     
+	               19 Bit    Registers := 2     
+	               18 Bit    Registers := 5     
+	               17 Bit    Registers := 10    
+	                1 Bit    Registers := 55    
++---Muxes : 
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 10    
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 20    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Perceptron 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+Module HALF_ADDER 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module FULL_ADDER 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module Parallel_Multiplier 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     18 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 2     
+Module Parallel_DFF 
+Detailed RTL Component Info : 
++---Registers : 
+	               17 Bit    Registers := 1     
+Module DFF 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module Parallel_DFF__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	               18 Bit    Registers := 1     
+Module Parallel_DFF__parameterized4 
+Detailed RTL Component Info : 
++---Registers : 
+	               19 Bit    Registers := 1     
+Module Parallel_DFF__parameterized6 
+Detailed RTL Component Info : 
++---Registers : 
+	               20 Bit    Registers := 1     
+Module Parallel_DFF__parameterized8 
+Detailed RTL Component Info : 
++---Registers : 
+	               21 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+Why this net has no driver: _order_recur <const0>
+Why this net has no driver: _order_recur <const1>
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (TREE_ADD/\sum_2_3/GEN[3].INTERNAL.PIPE.DFF_I/q_dff_reg )
+INFO: [Synth 8-3886] merging instance 'TREE_ADD/reg_2_3/q_dff_reg[18]' (FDC) to 'TREE_ADD/reg_2_3/q_dff_reg[19]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 768.250 ; gain = 506.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-----------------+------------+---------------+----------------+
+|Module Name      | RTL Object | Depth x Width | Implemented As | 
++-----------------+------------+---------------+----------------+
+|sigmoid_lut_2048 | LUT[0]     | 2048x16       | LUT            | 
+|sigmoid_lut_2048 | LUT[0]     | 2048x16       | LUT            | 
++-----------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 781.332 ; gain = 520.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 793.098 ; gain = 531.766
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 904.547 ; gain = 643.215
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5365] Flop REG_TREE/q_dff_reg[0] is being inverted and renamed to REG_TREE/q_dff_reg[0]_inv.
+INFO: [Synth 8-5365] Flop REG_TREE/q_dff_reg[1] is being inverted and renamed to REG_TREE/q_dff_reg[1]_inv.
+INFO: [Synth 8-5365] Flop REG_TREE/q_dff_reg[2] is being inverted and renamed to REG_TREE/q_dff_reg[2]_inv.
+INFO: [Synth 8-5365] Flop REG_TREE/q_dff_reg[3] is being inverted and renamed to REG_TREE/q_dff_reg[3]_inv.
+INFO: [Synth 8-5365] Flop REG_TREE/q_dff_reg[4] is being inverted and renamed to REG_TREE/q_dff_reg[4]_inv.
+INFO: [Synth 8-5365] Flop REG_TREE/q_dff_reg[5] is being inverted and renamed to REG_TREE/q_dff_reg[5]_inv.
+INFO: [Synth 8-5365] Flop REG_TREE/q_dff_reg[6] is being inverted and renamed to REG_TREE/q_dff_reg[6]_inv.
+INFO: [Synth 8-5365] Flop REG_TREE/q_dff_reg[7] is being inverted and renamed to REG_TREE/q_dff_reg[7]_inv.
+INFO: [Synth 8-5365] Flop REG_TREE/q_dff_reg[8] is being inverted and renamed to REG_TREE/q_dff_reg[8]_inv.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 904.547 ; gain = 643.215
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 904.547 ; gain = 643.215
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 904.547 ; gain = 643.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 904.547 ; gain = 643.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 904.547 ; gain = 643.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 904.547 ; gain = 643.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    49|
+|3     |LUT1   |    23|
+|4     |LUT2   |   151|
+|5     |LUT3   |   301|
+|6     |LUT4   |   400|
+|7     |LUT5   |   252|
+|8     |LUT6   |  1037|
+|9     |MUXF7  |    31|
+|10    |MUXF8  |    10|
+|11    |FDCE   |   402|
+|12    |FDPE   |     9|
+|13    |IBUF   |   181|
+|14    |OBUF   |    16|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------------------------+------------------------------------------------+------+
+|      |Instance                              |Module                                          |Cells |
++------+--------------------------------------+------------------------------------------------+------+
+|1     |top                                   |                                                |  2863|
+|2     |  LUT                                 |sigmoid_lut_2048                                |   144|
+|3     |  REG_1                               |Parallel_DFF                                    |   211|
+|4     |  REG_10                              |Parallel_DFF_0                                  |   202|
+|5     |  REG_2                               |Parallel_DFF_1                                  |   202|
+|6     |  REG_3                               |Parallel_DFF_2                                  |   211|
+|7     |  REG_4                               |Parallel_DFF_3                                  |   202|
+|8     |  REG_5                               |Parallel_DFF_4                                  |   211|
+|9     |  REG_6                               |Parallel_DFF_5                                  |   202|
+|10    |  REG_7                               |Parallel_DFF_6                                  |   211|
+|11    |  REG_8                               |Parallel_DFF_7                                  |   202|
+|12    |  REG_9                               |Parallel_DFF_8                                  |   211|
+|13    |  REG_TREE                            |Parallel_DFF__parameterized8                    |    69|
+|14    |  TREE_ADD                            |Tree_Adder                                      |   387|
+|15    |    reg_1_1                           |Parallel_DFF__parameterized2                    |    33|
+|16    |    reg_1_2                           |Parallel_DFF__parameterized2_9                  |    24|
+|17    |    reg_1_3                           |Parallel_DFF__parameterized2_10                 |    33|
+|18    |    reg_1_4                           |Parallel_DFF__parameterized2_11                 |    24|
+|19    |    reg_1_5                           |Parallel_DFF__parameterized2_12                 |    28|
+|20    |    reg_2_1                           |Parallel_DFF__parameterized4                    |    35|
+|21    |    reg_2_2                           |Parallel_DFF__parameterized4_13                 |    26|
+|22    |    reg_2_3                           |Parallel_DFF__parameterized6                    |    25|
+|23    |    reg_3_1                           |Parallel_DFF__parameterized6_14                 |    38|
+|24    |    sum_1_1                           |Ripple_Carry_Adder_Pipelined                    |    10|
+|25    |      \GEN[12].INTERNAL.PIPE.DFF_I    |DFF_77                                          |     2|
+|26    |      \GEN[15].INTERNAL.PIPE.DFF_I    |DFF_78                                          |     2|
+|27    |      \GEN[3].INTERNAL.PIPE.DFF_I     |DFF_79                                          |     2|
+|28    |      \GEN[6].INTERNAL.PIPE.DFF_I     |DFF_80                                          |     2|
+|29    |      \GEN[9].INTERNAL.PIPE.DFF_I     |DFF_81                                          |     2|
+|30    |    sum_1_2                           |Ripple_Carry_Adder_Pipelined_15                 |    10|
+|31    |      \GEN[12].INTERNAL.PIPE.DFF_I    |DFF_72                                          |     2|
+|32    |      \GEN[15].INTERNAL.PIPE.DFF_I    |DFF_73                                          |     2|
+|33    |      \GEN[3].INTERNAL.PIPE.DFF_I     |DFF_74                                          |     2|
+|34    |      \GEN[6].INTERNAL.PIPE.DFF_I     |DFF_75                                          |     2|
+|35    |      \GEN[9].INTERNAL.PIPE.DFF_I     |DFF_76                                          |     2|
+|36    |    sum_1_3                           |Ripple_Carry_Adder_Pipelined_16                 |    10|
+|37    |      \GEN[12].INTERNAL.PIPE.DFF_I    |DFF_67                                          |     2|
+|38    |      \GEN[15].INTERNAL.PIPE.DFF_I    |DFF_68                                          |     2|
+|39    |      \GEN[3].INTERNAL.PIPE.DFF_I     |DFF_69                                          |     2|
+|40    |      \GEN[6].INTERNAL.PIPE.DFF_I     |DFF_70                                          |     2|
+|41    |      \GEN[9].INTERNAL.PIPE.DFF_I     |DFF_71                                          |     2|
+|42    |    sum_1_4                           |Ripple_Carry_Adder_Pipelined_17                 |    10|
+|43    |      \GEN[12].INTERNAL.PIPE.DFF_I    |DFF_62                                          |     2|
+|44    |      \GEN[15].INTERNAL.PIPE.DFF_I    |DFF_63                                          |     2|
+|45    |      \GEN[3].INTERNAL.PIPE.DFF_I     |DFF_64                                          |     2|
+|46    |      \GEN[6].INTERNAL.PIPE.DFF_I     |DFF_65                                          |     2|
+|47    |      \GEN[9].INTERNAL.PIPE.DFF_I     |DFF_66                                          |     2|
+|48    |    sum_1_5                           |Ripple_Carry_Adder_Pipelined_18                 |    10|
+|49    |      \GEN[12].INTERNAL.PIPE.DFF_I    |DFF_57                                          |     2|
+|50    |      \GEN[15].INTERNAL.PIPE.DFF_I    |DFF_58                                          |     2|
+|51    |      \GEN[3].INTERNAL.PIPE.DFF_I     |DFF_59                                          |     2|
+|52    |      \GEN[6].INTERNAL.PIPE.DFF_I     |DFF_60                                          |     2|
+|53    |      \GEN[9].INTERNAL.PIPE.DFF_I     |DFF_61                                          |     2|
+|54    |    sum_2_1                           |Ripple_Carry_Adder_Pipelined__parameterized2    |    15|
+|55    |      \GEN[12].INTERNAL.PIPE.DFF_I    |DFF_50                                          |     2|
+|56    |      \GEN[15].INTERNAL.PIPE.DFF_I    |DFF_51                                          |     2|
+|57    |      \GEN[18].INTERNAL.PIPE.DFF_I    |DFF_52                                          |     3|
+|58    |      \GEN[2].INTERNAL.NOT_PIPE.FFI   |FULL_ADDER_53                                   |     2|
+|59    |      \GEN[3].INTERNAL.PIPE.DFF_I     |DFF_54                                          |     2|
+|60    |      \GEN[6].INTERNAL.PIPE.DFF_I     |DFF_55                                          |     2|
+|61    |      \GEN[9].INTERNAL.PIPE.DFF_I     |DFF_56                                          |     2|
+|62    |    sum_2_2                           |Ripple_Carry_Adder_Pipelined__parameterized2_19 |    15|
+|63    |      \GEN[12].INTERNAL.PIPE.DFF_I    |DFF_43                                          |     2|
+|64    |      \GEN[15].INTERNAL.PIPE.DFF_I    |DFF_44                                          |     2|
+|65    |      \GEN[18].INTERNAL.PIPE.DFF_I    |DFF_45                                          |     3|
+|66    |      \GEN[2].INTERNAL.NOT_PIPE.FFI   |FULL_ADDER_46                                   |     2|
+|67    |      \GEN[3].INTERNAL.PIPE.DFF_I     |DFF_47                                          |     2|
+|68    |      \GEN[6].INTERNAL.PIPE.DFF_I     |DFF_48                                          |     2|
+|69    |      \GEN[9].INTERNAL.PIPE.DFF_I     |DFF_49                                          |     2|
+|70    |    sum_2_3                           |Ripple_Carry_Adder_Pipelined__parameterized2_20 |    12|
+|71    |      \GEN[15].INTERNAL.PIPE.FFI      |FULL_ADDER_38                                   |     1|
+|72    |      \GEN[16].INTERNAL.NOT_PIPE.FFI  |FULL_ADDER_39                                   |     1|
+|73    |      \GEN[17].INTERNAL.NOT_PIPE.FFI  |FULL_ADDER_40                                   |     2|
+|74    |      \GEN[12].INTERNAL.PIPE.DFF_I    |DFF_36                                          |     2|
+|75    |      \GEN[15].INTERNAL.PIPE.DFF_I    |DFF_37                                          |     1|
+|76    |      \GEN[18].INTERNAL.PIPE.DFF_I    |DFF_41                                          |     3|
+|77    |      \GEN[9].INTERNAL.PIPE.DFF_I     |DFF_42                                          |     2|
+|78    |    sum_3_1                           |Ripple_Carry_Adder_Pipelined__parameterized4    |    14|
+|79    |      \GEN[12].INTERNAL.PIPE.DFF_I    |DFF_28                                          |     2|
+|80    |      \GEN[15].INTERNAL.PIPE.DFF_I    |DFF_29                                          |     2|
+|81    |      \GEN[18].INTERNAL.PIPE.DFF_I    |DFF_30                                          |     1|
+|82    |      \GEN[18].INTERNAL.PIPE.FFI      |FULL_ADDER_31                                   |     1|
+|83    |      \GEN[2].INTERNAL.NOT_PIPE.FFI   |FULL_ADDER_32                                   |     2|
+|84    |      \GEN[3].INTERNAL.PIPE.DFF_I     |DFF_33                                          |     2|
+|85    |      \GEN[6].INTERNAL.PIPE.DFF_I     |DFF_34                                          |     2|
+|86    |      \GEN[9].INTERNAL.PIPE.DFF_I     |DFF_35                                          |     2|
+|87    |    sum_4_1                           |Ripple_Carry_Adder_Pipelined__parameterized6    |    15|
+|88    |      \GEN[12].INTERNAL.PIPE.DFF_I    |DFF                                             |     2|
+|89    |      \GEN[15].INTERNAL.PIPE.DFF_I    |DFF_21                                          |     2|
+|90    |      \GEN[18].INTERNAL.PIPE.DFF_I    |DFF_22                                          |     1|
+|91    |      \GEN[18].INTERNAL.PIPE.FFI      |FULL_ADDER                                      |     1|
+|92    |      \GEN[19].INTERNAL.NOT_PIPE.FFI  |FULL_ADDER_23                                   |     1|
+|93    |      \GEN[2].INTERNAL.NOT_PIPE.FFI   |FULL_ADDER_24                                   |     2|
+|94    |      \GEN[3].INTERNAL.PIPE.DFF_I     |DFF_25                                          |     2|
+|95    |      \GEN[6].INTERNAL.PIPE.DFF_I     |DFF_26                                          |     2|
+|96    |      \GEN[9].INTERNAL.PIPE.DFF_I     |DFF_27                                          |     2|
++------+--------------------------------------+------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 904.547 ; gain = 643.215
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 904.547 ; gain = 295.621
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 904.547 ; gain = 643.215
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 90 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 904.547 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+157 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 904.547 ; gain = 655.934
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 904.547 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/gxhan/perceptron/perceptron.runs/synth_1/Perceptron.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Perceptron_utilization_synth.rpt -pb Perceptron_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 23 14:10:46 2020...
