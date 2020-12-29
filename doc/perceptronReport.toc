@@ -9,9 +9,9 @@
 \contentsline {subsection}{\numberline {2.3}Activation Function Circuit Architecture}{12}{}%
 \contentsline {section}{\numberline {3}VHDL CODE}{13}{}%
 \contentsline {subsection}{\numberline {3.1}Modules List}{13}{}%
-\contentsline {subsection}{\numberline {3.2}Perceptron}{13}{}%
+\contentsline {subsection}{\numberline {3.2}Perceptron}{14}{}%
 \contentsline {subsection}{\numberline {3.3}Parallel Multiplier}{15}{}%
-\contentsline {subsection}{\numberline {3.4}Unsigned Parallel Multiplier}{16}{}%
+\contentsline {subsection}{\numberline {3.4}Unsigned Parallel Multiplier}{17}{}%
 \contentsline {subsection}{\numberline {3.5}Tree Adder}{19}{}%
 \contentsline {subsubsection}{\numberline {3.5.1}Ripple Carry Adder Pipelined}{19}{}%
 \contentsline {subsection}{\numberline {3.6}LUT}{21}{}%

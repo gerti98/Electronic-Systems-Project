@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.24)  23 DEC 2020 17:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.24)  29 DEC 2020 22:22
 entering extended mode
 **./perceptronReport.tex
 (perceptronReport.tex
@@ -676,7 +676,7 @@ Overfull \hbox (12.34221pt too wide) in paragraph at lines 50--51
 Here is how much of TeX's memory you used:
  7918 strings out of 480236
  122348 string characters out of 2880557
- 913374 words of memory out of 3000000
+ 915450 words of memory out of 3000000
  24326 multiletter control sequences out of 15000+200000
  542675 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -698,7 +698,7 @@ MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gxhan/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/gxhan/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/gxh
 an/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on perceptronReport.pdf (36 pages, 746272 bytes).
+Output written on perceptronReport.pdf (36 pages, 747201 bytes).
 PDF statistics:
  301 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

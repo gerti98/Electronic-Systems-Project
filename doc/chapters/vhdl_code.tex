@@ -1,5 +1,6 @@
 \section{VHDL CODE}
-In this chapter will be presented the main modules that compose the architecture of the \textbf{Perceptron with sigmoid activation function}. To implement the architecture was exploited \textbf{Sigasi  Studio} for the vhdl part and \textbf{Visual Studio Code} for the python part. 
+In this chapter will be presented the main modules that compose the architecture of the \textbf{Perceptron with sigmoid activation function}. To implement the architecture was exploited \textbf{Sigasi  Studio} for the vhdl part and \textbf{Visual Studio Code} for the python part. \\
+First of all, as written in the specifics of the project, each input shall be represented in the standard 2's complement notation: for this reasons, inputs, in the architecture, will be treated like simple std$\_$logic$\_$vectors (as will be shown in the following paragraphs). By exploiting 2's complement architectures and, in particular, fixed point representations for real numbers (de-facto is equal to 2's complement) will be possible to compute sums, multiplications as described in the latter chapter. 
 \subsection{Modules List}
 As presented in the last chapter, I have followed a similar approach for creating the architecture. The following modules were created:
 
