@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.24)  30 DEC 2020 20:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.24)  4 JAN 2021 23:39
 entering extended mode
 **./perceptronReport.tex
 (perceptronReport.tex
@@ -594,30 +594,30 @@ Package pdftex.def Info: img/est_test_3.png  used on input line 47.
 <img/aimed_test.png, id=217, 888.31876pt x 118.94438pt>
 File: img/aimed_test.png Graphic file (type png)
 <use img/aimed_test.png>
-Package pdftex.def Info: img/aimed_test.png  used on input line 194.
+Package pdftex.def Info: img/aimed_test.png  used on input line 195.
 (pdftex.def)             Requested size: 390.0pt x 52.21951pt.
 
-Overfull \hbox (6.9748pt too wide) in paragraph at lines 206--206
+Overfull \hbox (6.9748pt too wide) in paragraph at lines 207--207
 []$\OML/cmm/m/it/12 round []$| 
  []
 
 
-Overfull \hbox (10.30817pt too wide) in paragraph at lines 206--206
+Overfull \hbox (10.30817pt too wide) in paragraph at lines 207--207
 []$\OML/cmm/m/it/12 round []$| 
  []
 
 
-Overfull \hbox (6.9748pt too wide) in paragraph at lines 206--206
+Overfull \hbox (6.9748pt too wide) in paragraph at lines 207--207
 []$\OML/cmm/m/it/12 round []$| 
  []
 
 
-Overfull \hbox (10.30817pt too wide) in paragraph at lines 206--207
+Overfull \hbox (10.30817pt too wide) in paragraph at lines 207--208
 []$\OML/cmm/m/it/12 round []$| 
  []
 
 
-Overfull \hbox (42.05125pt too wide) in paragraph at lines 202--221
+Overfull \hbox (42.05125pt too wide) in paragraph at lines 203--222
  [] 
  []
 
@@ -676,11 +676,11 @@ Overfull \hbox (12.34221pt too wide) in paragraph at lines 50--51
 Here is how much of TeX's memory you used:
  7918 strings out of 480236
  122348 string characters out of 2880557
- 915450 words of memory out of 3000000
+ 916450 words of memory out of 3000000
  24326 multiletter control sequences out of 15000+200000
  542675 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,12n,77p,912b,1806s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 70i,12n,77p,947b,1806s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\gxhan\AppData\Local\MiKTeX\fonts/pk/ljf
 our/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/gxhan/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/gxhan/AppData/Local/Progr
@@ -698,7 +698,7 @@ MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gxhan/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/gxhan/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/gxh
 an/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on perceptronReport.pdf (36 pages, 747531 bytes).
+Output written on perceptronReport.pdf (36 pages, 749030 bytes).
 PDF statistics:
  301 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

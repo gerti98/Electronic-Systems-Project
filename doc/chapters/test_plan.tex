@@ -1,18 +1,18 @@
 \section{Test Plan}
 In order to verify the correctness of the system the following tests were made:
 \begin{enumerate}
-	\item \textbf{Unit Tests}: following the \textbf{bottom-up} strategy, each sub-module (Parallel Multiplier, Ripple Carry Adder Pipelined...), after completing the implementation, has a dedicated testbench in order to check the correctness of the single sub-module in isolation. Considering the fact that this test are \textbf{trivial} (just checking if the sum or the product of some numbers is correct) this will not be showed in this documentation.
+	\item \textbf{Unit Tests}: following the \textbf{bottom-up} strategy, each sub-module (Parallel Multiplier, Ripple Carry Adder Pipelined...), after completing the implementation, has a dedicated testbench in order to check the correctness of the single sub-module in isolation. Considering the fact that this test are \textbf{trivial} (just checking if the sum or the product of some numbers is correct) the single modules were not separately implemented in python. So this part will not be showed in this documentation.
 	\item \textbf{System Estimation Test}: in this phase, some testbenches were written with particular inputs. The aim of this test is only to check if the result will resemble the sigmoid curve by varying the inputs in time in an increasing way.
 	\item \textbf{System Aimed Test}: after checking that the system is \textit{likely} correct by the latter test, through a python script will be made a test with different inputs in the range considered and check, with an additional testbench, if the outputs are equal.
 \end{enumerate}
 \subsection{System Estimation Test}
 Even before checking the correctness of the output of the system by a given input, three "estimation tests" were made. The aim of these tests is just to obtain a sigmoid curve by setting each $x_{i}$ and $w_{i}$ and varying the bias $b$ in the range of $[-1; +1]$.
 \subsubsection{Estimation Test 1}
-In this case we have the following inputs:
+In this case we have the \textbf{following inputs}:
 \begin{equation}
 	x_{1} \dots x_{10} = 0, w_{1} \dots w_{10} = 0
 \end{equation}
-The bias b will vary in the whole range of $[-1, +1]$. Just to remind the sigmoid function curve, we expect to obtain a curve with an odd symmetry and a "linear" behaviour, due to the fact that we are considering the values near zero of the curve:
+The bias b will vary in the whole range of $[-1, +1]$. Just to remind the sigmoid function curve, we \textbf{expect to obtain a curve with an odd symmetry and a "linear" behaviour}, due to the fact that we are considering the values near zero of the curve:
 \begin{figure}[H]
 	\centering
 	\caption{Sigmoid Function Plot}
@@ -29,7 +29,7 @@ There are different replication of the system due to the fact that the bias b wi
 \begin{equation}
 	x_{1} \dots x_{10} \approx 1, w_{1} \dots w_{10} \approx 1
 \end{equation}
-The bias b will vary in the whole range of $[-1, +1]$. We expect to obtain a likely flat curve with some "high values" due to the fact that the summation of the ten product is 10 and the sigmoid at that value tends to 1.
+The bias b will vary in the whole range of $[-1, +1]$. \textbf{We expect to obtain a likely flat curve with some "high values"} due to the fact that the summation of the ten product is 10 and the sigmoid at that value tends to 1.
 \begin{figure}[H]
 	\centering
 	\caption{Output of the System 2}
@@ -40,7 +40,7 @@ The output of the system is similar to a flat curve. We can state that, by compa
 \begin{equation}
 	x_{1} \dots x_{10} \approx -1, w_{1} \dots w_{10} \approx 1
 \end{equation}
-The bias b will vary in the whole range of $[-1, +1]$. We expect to obtain a likely flat curve with some "low values" due to the fact that the summation of the ten product is -10.
+The bias b will vary in the whole range of $[-1, +1]$.\textbf{ We expect to obtain a likely flat curve with some "low values"} due to the fact that the summation of the ten product is -10.
 \begin{figure}[H]
 	\centering
 	\caption{Output of the System 3}
@@ -67,14 +67,15 @@ def get_outputs(i, x, w, b):
 	
 	#the sum with 12 bits
 	sum_in_circuit = round(sum/lsb_in)
-print(f"Sum value quantized:\t {sum_in_circuit}")
+	print(f"Sum value quantized:\t {sum_in_circuit}")
 
-f_z_in_circuit = round(f_z/lsb_out)
+	f_z_in_circuit = round(f_z/lsb_out)
 	print(f"Output value quantized:\t {f_z_in_circuit}")
-	def summation(x, w, b):
+
+def summation(x, w, b):
 	sum = 0
 	for i in range(0, 10):
-	sum += x[i]*w[i]
+		sum += x[i]*w[i]
 	sum += b
 	return sum
 
